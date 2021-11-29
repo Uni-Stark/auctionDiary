@@ -24,6 +24,7 @@ class MainActivity : AppCompatActivity() {
         binding.apply {
             activity = this@MainActivity
         }
+
         tabLayoutSetting()
     }
 
@@ -37,7 +38,7 @@ class MainActivity : AppCompatActivity() {
             adapter = MainViewPagerAdapter(context as FragmentActivity)
         }
 
-        val tabList = listOf("임장", "게시판", "경매정보", "세팅")
+        val tabList = listOf("임장노트", "게시판", "경매정보", "세팅")
         TabLayoutMediator(binding.mainTabContainer, binding.mainViewPager) { tab, position ->
             tab.text = tabList[position]
         }.attach()

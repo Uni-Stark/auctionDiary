@@ -5,9 +5,11 @@
       <map>
         <entry key="..\:/Users/kgo07/Desktop/auctiondiary/app/src/main/res/layout/activity_main.xml" value="0.5182291666666666" />
         <entry key="..\:/Users/kgo07/Desktop/auctiondiary/app/src/main/res/layout/fragment_auction.xml" value="0.5333333333333333" />
+        <entry key="..\:/Users/kgo07/Desktop/auctiondiary/app/src/main/res/layout/fragment_auction_diary.xml" value="0.5333333333333333" />
         <entry key="..\:/Users/kgo07/Desktop/auctiondiary/app/src/main/res/layout/fragment_board.xml" value="0.5333333333333333" />
         <entry key="..\:/Users/kgo07/Desktop/auctiondiary/app/src/main/res/layout/fragment_imjang.xml" value="0.5333333333333333" />
         <entry key="..\:/Users/kgo07/Desktop/auctiondiary/app/src/main/res/layout/fragment_setting.xml" value="0.5333333333333333" />
+        <entry key="..\:/Users/kgo07/Desktop/auctiondiary/app/src/main/res/layout/list_auction_note.xml" value="0.5333333333333333" />
       </map>
     </option>
   </component>
