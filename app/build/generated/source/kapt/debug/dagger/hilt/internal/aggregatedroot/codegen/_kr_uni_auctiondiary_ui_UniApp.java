@@ -7,8 +7,8 @@ import dagger.hilt.internal.aggregatedroot.AggregatedRoot;
  * This class should only be referenced by generated code!This class aggregates information across multiple compilations.
  */
 @AggregatedRoot(
-    root = "kr.uni.auctiondiary.ui.UniApp",
-    originatingRoot = "kr.uni.auctiondiary.ui.UniApp",
+    root = "kr.uni.auctiondiary.util.UniApp",
+    originatingRoot = "kr.uni.auctiondiary.util.UniApp",
     rootAnnotation = HiltAndroidApp.class
 )
 public class _kr_uni_auctiondiary_ui_UniApp {

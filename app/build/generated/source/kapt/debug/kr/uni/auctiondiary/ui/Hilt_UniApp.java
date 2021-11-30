@@ -7,6 +7,8 @@ import dagger.hilt.android.internal.managers.ComponentSupplier;
 import dagger.hilt.android.internal.modules.ApplicationContextModule;
 import dagger.hilt.internal.GeneratedComponentManagerHolder;
 import dagger.hilt.internal.UnsafeCasts;
+import kr.uni.auctiondiary.util.UniApp;
+
 import java.lang.Object;
 import java.lang.Override;
 

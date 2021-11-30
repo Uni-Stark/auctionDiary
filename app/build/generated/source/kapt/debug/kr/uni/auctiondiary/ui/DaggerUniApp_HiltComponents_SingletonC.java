@@ -30,6 +30,7 @@ import javax.inject.Provider;
 import kr.uni.auctiondiary.ui.main.MainActivity;
 import kr.uni.auctiondiary.ui.main.MainActivity_MembersInjector;
 import kr.uni.auctiondiary.ui.main.MainViewModel;
+import kr.uni.auctiondiary.util.UniApp;
 
 @DaggerGenerated
 @SuppressWarnings({
