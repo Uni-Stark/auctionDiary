@@ -13,8 +13,7 @@ class FragmentAuction : Fragment() {
     private lateinit var binding: FragmentAuctionBinding
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
-    ): View? {
-
+    ): View {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_auction, container, false)
         return binding.root
     }

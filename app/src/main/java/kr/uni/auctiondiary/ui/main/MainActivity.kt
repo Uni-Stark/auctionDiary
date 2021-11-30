@@ -13,10 +13,9 @@ import javax.inject.Inject
 
 @AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
-    lateinit var binding: ActivityMainBinding
-
     @Inject
     lateinit var viewModel: MainViewModel
+    lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -24,12 +23,10 @@ class MainActivity : AppCompatActivity() {
         binding.apply {
             activity = this@MainActivity
         }
-
         tabLayoutSetting()
     }
 
     private fun tabLayoutSetting() {
-
         /**
          * viewpager에 adapter를 먼저 세팅시켜야지 Exception이 안생긴다.
          */

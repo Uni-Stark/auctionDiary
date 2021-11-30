@@ -7,9 +7,10 @@ import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import kr.uni.auctiondiary.databinding.ListAuctionNoteBinding
+import kr.uni.auctiondiary.util.database.entity.AuctionNoteEntity
 
 class AuctionDiaryAdapter() :
-    ListAdapter<AuctionDiaryDAO, AuctionDiaryAdapter.ViewHolder>(diffUtil) {
+    ListAdapter<AuctionNoteEntity, AuctionDiaryAdapter.ViewHolder>(diffUtil) {
 
 
     override fun onCreateViewHolder(
@@ -28,11 +29,11 @@ class AuctionDiaryAdapter() :
     inner class ViewHolder(private val binding: ListAuctionNoteBinding) :
         RecyclerView.ViewHolder(binding.root) {
 
-        fun bind(data: AuctionDiaryDAO) {
+        fun bind(data: AuctionNoteEntity) {
 
             setPlaceName(data.place)
             setTag(data.tag)
-            setImage(data.imagePath)
+            setImage(data.picturePath)
         }
 
         private fun setPlaceName(name: String) {
@@ -54,13 +55,13 @@ class AuctionDiaryAdapter() :
     }
 
     companion object {
-        private val diffUtil = object : DiffUtil.ItemCallback<AuctionDiaryDAO>() {
+        private val diffUtil = object : DiffUtil.ItemCallback<AuctionNoteEntity>() {
             override fun areItemsTheSame(
-                oldItem: AuctionDiaryDAO, newItem: AuctionDiaryDAO
+                oldItem: AuctionNoteEntity, newItem: AuctionNoteEntity
             ): Boolean = oldItem == newItem
 
             override fun areContentsTheSame(
-                oldItem: AuctionDiaryDAO, newItem: AuctionDiaryDAO
+                oldItem: AuctionNoteEntity, newItem: AuctionNoteEntity
             ): Boolean {
                 TODO("Not yet implemented")
             }

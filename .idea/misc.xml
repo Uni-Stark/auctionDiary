@@ -3,6 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/kgo07/Desktop/auctionDiary/app/src/main/res/layout/activity_main.xml" value="0.34791666666666665" />
+        <entry key="..\:/Users/kgo07/Desktop/auctionDiary/app/src/main/res/layout/fragment_auction.xml" value="0.34791666666666665" />
+        <entry key="..\:/Users/kgo07/Desktop/auctionDiary/app/src/main/res/layout/fragment_auction_diary.xml" value="0.25" />
         <entry key="..\:/Users/kgo07/Desktop/auctiondiary/app/src/main/res/layout/activity_main.xml" value="0.5182291666666666" />
         <entry key="..\:/Users/kgo07/Desktop/auctiondiary/app/src/main/res/layout/fragment_auction.xml" value="0.5333333333333333" />
         <entry key="..\:/Users/kgo07/Desktop/auctiondiary/app/src/main/res/layout/fragment_auction_diary.xml" value="0.5333333333333333" />
@@ -13,7 +16,7 @@
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">

@@ -1943,6 +1943,9 @@ id anticipate
 id arc
 id asConfigured
 id async
+id auctionNoteListImage
+id auctionNoteListLocation
+id auctionNoteListTag
 id auto
 id autoComplete
 id autoCompleteToEnd
@@ -2054,6 +2057,7 @@ id fitToContents
 id fixed
 id flip
 id floating
+id floatingButton
 id forever
 id fragment_container_view_tag
 id frost
@@ -2101,6 +2105,7 @@ id legacy
 id line1
 id line3
 id linear
+id list
 id listMode
 id list_item
 id lottie_layer_name
@@ -2170,6 +2175,9 @@ id navigation_header_container
 id never
 id neverCompleteToEnd
 id neverCompleteToStart
+id noAuctionListContainer
+id noDiaryButton
+id noDiaryText
 id noScroll
 id noState
 id none
@@ -2435,9 +2443,10 @@ layout design_text_input_end_icon
 layout design_text_input_start_icon
 layout fingerprint_dialog_layout
 layout fragment_auction
+layout fragment_auction_diary
 layout fragment_board
-layout fragment_imjang
 layout fragment_setting
+layout list_auction_note
 layout material_chip_input_combo
 layout material_clock_display
 layout material_clock_display_divider
@@ -3355,6 +3364,7 @@ style Widget_MaterialComponents_Toolbar_PrimarySurface
 style Widget_MaterialComponents_Toolbar_Surface
 style Widget_MaterialComponents_Tooltip
 style Widget_Support_CoordinatorLayout
+style normalButtonStyle
 styleable ActionBar background backgroundSplit backgroundStacked contentInsetEnd contentInsetEndWithActions contentInsetLeft contentInsetRight contentInsetStart contentInsetStartWithNavigation customNavigationLayout displayOptions divider elevation height hideOnContentScroll homeAsUpIndicator homeLayout icon indeterminateProgressStyle itemPadding logo navigationMode popupTheme progressBarPadding progressBarStyle subtitle subtitleTextStyle title titleTextStyle
 styleable ActionBarLayout android_layout_gravity
 styleable ActionMenuItemView android_minWidth

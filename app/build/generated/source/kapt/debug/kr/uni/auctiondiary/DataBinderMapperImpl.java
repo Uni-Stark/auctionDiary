@@ -17,8 +17,8 @@ import java.util.HashMap;
 import java.util.List;
 import kr.uni.auctiondiary.databinding.ActivityMainBindingImpl;
 import kr.uni.auctiondiary.databinding.FragmentAuctionBindingImpl;
+import kr.uni.auctiondiary.databinding.FragmentAuctionDiaryBindingImpl;
 import kr.uni.auctiondiary.databinding.FragmentBoardBindingImpl;
-import kr.uni.auctiondiary.databinding.FragmentImjangBindingImpl;
 import kr.uni.auctiondiary.databinding.FragmentSettingBindingImpl;
 
 public class DataBinderMapperImpl extends DataBinderMapper {
@@ -26,9 +26,9 @@ public class DataBinderMapperImpl extends DataBinderMapper {
 
   private static final int LAYOUT_FRAGMENTAUCTION = 2;
 
-  private static final int LAYOUT_FRAGMENTBOARD = 3;
+  private static final int LAYOUT_FRAGMENTAUCTIONDIARY = 3;
 
-  private static final int LAYOUT_FRAGMENTIMJANG = 4;
+  private static final int LAYOUT_FRAGMENTBOARD = 4;
 
   private static final int LAYOUT_FRAGMENTSETTING = 5;
 
@@ -37,8 +37,8 @@ public class DataBinderMapperImpl extends DataBinderMapper {
   static {
     INTERNAL_LAYOUT_ID_LOOKUP.put(kr.uni.auctiondiary.R.layout.activity_main, LAYOUT_ACTIVITYMAIN);
     INTERNAL_LAYOUT_ID_LOOKUP.put(kr.uni.auctiondiary.R.layout.fragment_auction, LAYOUT_FRAGMENTAUCTION);
+    INTERNAL_LAYOUT_ID_LOOKUP.put(kr.uni.auctiondiary.R.layout.fragment_auction_diary, LAYOUT_FRAGMENTAUCTIONDIARY);
     INTERNAL_LAYOUT_ID_LOOKUP.put(kr.uni.auctiondiary.R.layout.fragment_board, LAYOUT_FRAGMENTBOARD);
-    INTERNAL_LAYOUT_ID_LOOKUP.put(kr.uni.auctiondiary.R.layout.fragment_auction_diary, LAYOUT_FRAGMENTIMJANG);
     INTERNAL_LAYOUT_ID_LOOKUP.put(kr.uni.auctiondiary.R.layout.fragment_setting, LAYOUT_FRAGMENTSETTING);
   }
 
@@ -63,17 +63,17 @@ public class DataBinderMapperImpl extends DataBinderMapper {
           }
           throw new IllegalArgumentException("The tag for fragment_auction is invalid. Received: " + tag);
         }
+        case  LAYOUT_FRAGMENTAUCTIONDIARY: {
+          if ("layout/fragment_auction_diary_0".equals(tag)) {
+            return new FragmentAuctionDiaryBindingImpl(component, view);
+          }
+          throw new IllegalArgumentException("The tag for fragment_auction_diary is invalid. Received: " + tag);
+        }
         case  LAYOUT_FRAGMENTBOARD: {
           if ("layout/fragment_board_0".equals(tag)) {
             return new FragmentBoardBindingImpl(component, view);
           }
           throw new IllegalArgumentException("The tag for fragment_board is invalid. Received: " + tag);
-        }
-        case  LAYOUT_FRAGMENTIMJANG: {
-          if ("layout/fragment_imjang_0".equals(tag)) {
-            return new FragmentImjangBindingImpl(component, view);
-          }
-          throw new IllegalArgumentException("The tag for fragment_imjang is invalid. Received: " + tag);
         }
         case  LAYOUT_FRAGMENTSETTING: {
           if ("layout/fragment_setting_0".equals(tag)) {
@@ -141,8 +141,8 @@ public class DataBinderMapperImpl extends DataBinderMapper {
     static {
       sKeys.put("layout/activity_main_0", kr.uni.auctiondiary.R.layout.activity_main);
       sKeys.put("layout/fragment_auction_0", kr.uni.auctiondiary.R.layout.fragment_auction);
+      sKeys.put("layout/fragment_auction_diary_0", kr.uni.auctiondiary.R.layout.fragment_auction_diary);
       sKeys.put("layout/fragment_board_0", kr.uni.auctiondiary.R.layout.fragment_board);
-      sKeys.put("layout/fragment_imjang_0", kr.uni.auctiondiary.R.layout.fragment_auction_diary);
       sKeys.put("layout/fragment_setting_0", kr.uni.auctiondiary.R.layout.fragment_setting);
     }
   }
