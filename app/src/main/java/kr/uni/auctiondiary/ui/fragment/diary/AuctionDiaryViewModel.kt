@@ -1,6 +1,7 @@
 package kr.uni.auctiondiary.ui.fragment.diary
 
 import android.content.Context
+import android.content.Context.LOCATION_SERVICE
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModel
 import dagger.hilt.android.qualifiers.ApplicationContext
@@ -17,10 +18,17 @@ class AuctionDiaryViewModel @Inject constructor(@ApplicationContext context: Con
     @OptIn(InternalCoroutinesApi::class)
     private val database = AppDatabase.getInstance(context)
 
+
     /**
      *  @return_LiveData_for_automatically_refresh_recycler_view
      */
     fun fetchAuctionNoteData(): LiveData<List<AuctionNoteEntity>> =
         database.auctionNoteDao().fetchAll()
 
+
+    fun getCurrentLocation(context: Context): String {
+        val locationManager = context.getSystemService(LOCATION_SERVICE)
+        // GPS 마저 해야함
+        return ""
+    }
 }
