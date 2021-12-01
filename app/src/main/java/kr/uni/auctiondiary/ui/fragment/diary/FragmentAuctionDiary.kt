@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.*
@@ -22,8 +23,7 @@ import javax.inject.Inject
 @AndroidEntryPoint
 @InternalCoroutinesApi
 class FragmentAuctionDiary : Fragment() {
-    @Inject
-    lateinit var viewModel: AuctionDiaryViewModel
+    private val viewModel: AuctionDiaryViewModel by viewModels()
     lateinit var binding: FragmentAuctionDiaryBinding
     lateinit var adapter: AuctionDiaryAdapter
 

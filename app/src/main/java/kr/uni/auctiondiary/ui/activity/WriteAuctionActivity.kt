@@ -10,8 +10,6 @@ import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.core.app.ActivityCompat
 import androidx.databinding.DataBindingUtil
-import androidx.databinding.ObservableField
-import com.google.android.gms.maps.model.LatLng
 import com.gun0912.tedpermission.PermissionListener
 import com.gun0912.tedpermission.TedPermission
 import dagger.hilt.android.AndroidEntryPoint
@@ -26,7 +24,6 @@ class WriteAuctionActivity : BaseActivity() {
 
     private lateinit var binding: ActivityWriteAuctionBinding
     private val viewModel: WriteAuctionViewModel by viewModels()
-
     private val TAG = WriteAuctionActivity::class.java.simpleName
 
 
@@ -50,7 +47,6 @@ class WriteAuctionActivity : BaseActivity() {
             viewModel.getLocation(this@WriteAuctionActivity)
         }
     }
-
 
 
     private fun tedPermission() {

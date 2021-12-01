@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">auctiondiary</string>
+    <string name="currentLocation">현재위치</string>
 </resources>

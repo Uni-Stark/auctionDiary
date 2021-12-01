@@ -1917,6 +1917,7 @@ drawable ic_clock_black_24dp
 drawable ic_keyboard_black_24dp
 drawable ic_launcher_background
 drawable ic_launcher_foreground
+drawable ic_location
 drawable ic_mtrl_checked_circle
 drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
@@ -2007,6 +2008,7 @@ id accessibility_custom_action_6
 id accessibility_custom_action_7
 id accessibility_custom_action_8
 id accessibility_custom_action_9
+id actionBar
 id actionDown
 id actionDownUp
 id actionUp
@@ -2213,6 +2215,8 @@ id linear
 id list
 id listMode
 id list_item
+id locationIcon
+id locationMainContainer
 id lottie_layer_name
 id mainContainer
 id mainTabContainer
@@ -2360,6 +2364,7 @@ id shortcut
 id showCustom
 id showHome
 id showTitle
+id simpleLocation
 id sin
 id skipCollapsed
 id skipped
@@ -2689,6 +2694,7 @@ string common_open_on_phone
 string common_signin_button_text
 string common_signin_button_text_long
 string confirm_device_credential_password
+string currentLocation
 string default_error_msg
 string error_icon_content_description
 string exposed_dropdown_menu_content_description

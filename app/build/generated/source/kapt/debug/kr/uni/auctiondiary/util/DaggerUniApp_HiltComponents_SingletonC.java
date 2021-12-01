@@ -23,8 +23,9 @@ import dagger.hilt.android.internal.modules.ApplicationContextModule_ProvideAppl
 import dagger.hilt.android.internal.modules.ApplicationContextModule_ProvideContextFactory;
 import dagger.internal.DaggerGenerated;
 import dagger.internal.DoubleCheck;
+import dagger.internal.MapBuilder;
 import dagger.internal.Preconditions;
-import java.util.Collections;
+import dagger.internal.SetBuilder;
 import java.util.Map;
 import java.util.Set;
 import javax.inject.Provider;
@@ -32,8 +33,8 @@ import kr.uni.auctiondiary.ui.activity.WriteAuctionActivity;
 import kr.uni.auctiondiary.ui.activity.WriteAuctionViewModel;
 import kr.uni.auctiondiary.ui.activity.WriteAuctionViewModel_HiltModules_KeyModule_ProvideFactory;
 import kr.uni.auctiondiary.ui.fragment.diary.AuctionDiaryViewModel;
+import kr.uni.auctiondiary.ui.fragment.diary.AuctionDiaryViewModel_HiltModules_KeyModule_ProvideFactory;
 import kr.uni.auctiondiary.ui.fragment.diary.FragmentAuctionDiary;
-import kr.uni.auctiondiary.ui.fragment.diary.FragmentAuctionDiary_MembersInjector;
 import kr.uni.auctiondiary.ui.main.MainActivity;
 import kr.uni.auctiondiary.ui.main.MainActivity_MembersInjector;
 import kr.uni.auctiondiary.ui.main.MainViewModel;
@@ -299,8 +300,6 @@ public final class DaggerUniApp_HiltComponents_SingletonC extends UniApp_HiltCom
 
     private final FragmentCImpl fragmentCImpl = this;
 
-    private Provider<AuctionDiaryViewModel> auctionDiaryViewModelProvider;
-
     private FragmentCImpl(DaggerUniApp_HiltComponents_SingletonC singletonC,
         ActivityRetainedCImpl activityRetainedCImpl, ActivityCImpl activityCImpl,
         Fragment fragmentParam) {
@@ -308,17 +307,7 @@ public final class DaggerUniApp_HiltComponents_SingletonC extends UniApp_HiltCom
       this.activityRetainedCImpl = activityRetainedCImpl;
       this.activityCImpl = activityCImpl;
 
-      initialize(fragmentParam);
 
-    }
-
-    private AuctionDiaryViewModel auctionDiaryViewModel() {
-      return new AuctionDiaryViewModel(ApplicationContextModule_ProvideContextFactory.provideContext(singletonC.applicationContextModule));
-    }
-
-    @SuppressWarnings("unchecked")
-    private void initialize(final Fragment fragmentParam) {
-      this.auctionDiaryViewModelProvider = DoubleCheck.provider(new SwitchingProvider<AuctionDiaryViewModel>(singletonC, activityRetainedCImpl, activityCImpl, fragmentCImpl, 0));
     }
 
     @Override
@@ -333,45 +322,6 @@ public final class DaggerUniApp_HiltComponents_SingletonC extends UniApp_HiltCom
 
     @Override
     public void injectFragmentAuctionDiary(FragmentAuctionDiary fragmentAuctionDiary) {
-      injectFragmentAuctionDiary2(fragmentAuctionDiary);
-    }
-
-    private FragmentAuctionDiary injectFragmentAuctionDiary2(FragmentAuctionDiary instance) {
-      FragmentAuctionDiary_MembersInjector.injectViewModel(instance, auctionDiaryViewModelProvider.get());
-      return instance;
-    }
-
-    private static final class SwitchingProvider<T> implements Provider<T> {
-      private final DaggerUniApp_HiltComponents_SingletonC singletonC;
-
-      private final ActivityRetainedCImpl activityRetainedCImpl;
-
-      private final ActivityCImpl activityCImpl;
-
-      private final FragmentCImpl fragmentCImpl;
-
-      private final int id;
-
-      SwitchingProvider(DaggerUniApp_HiltComponents_SingletonC singletonC,
-          ActivityRetainedCImpl activityRetainedCImpl, ActivityCImpl activityCImpl,
-          FragmentCImpl fragmentCImpl, int id) {
-        this.singletonC = singletonC;
-        this.activityRetainedCImpl = activityRetainedCImpl;
-        this.activityCImpl = activityCImpl;
-        this.fragmentCImpl = fragmentCImpl;
-        this.id = id;
-      }
-
-      @SuppressWarnings("unchecked")
-      @Override
-      public T get() {
-        switch (id) {
-          case 0: // kr.uni.auctiondiary.ui.fragment.diary.AuctionDiaryViewModel 
-          return (T) fragmentCImpl.auctionDiaryViewModel();
-
-          default: throw new AssertionError(id);
-        }
-      }
     }
   }
 
@@ -416,7 +366,7 @@ public final class DaggerUniApp_HiltComponents_SingletonC extends UniApp_HiltCom
 
     @Override
     public Set<String> getViewModelKeys() {
-      return Collections.<String>singleton(WriteAuctionViewModel_HiltModules_KeyModule_ProvideFactory.provide());
+      return SetBuilder.<String>newSetBuilder(2).add(AuctionDiaryViewModel_HiltModules_KeyModule_ProvideFactory.provide()).add(WriteAuctionViewModel_HiltModules_KeyModule_ProvideFactory.provide()).build();
     }
 
     @Override
@@ -456,6 +406,8 @@ public final class DaggerUniApp_HiltComponents_SingletonC extends UniApp_HiltCom
 
     private final ViewModelCImpl viewModelCImpl = this;
 
+    private Provider<AuctionDiaryViewModel> auctionDiaryViewModelProvider;
+
     private Provider<WriteAuctionViewModel> writeAuctionViewModelProvider;
 
     private ViewModelCImpl(DaggerUniApp_HiltComponents_SingletonC singletonC,
@@ -467,14 +419,19 @@ public final class DaggerUniApp_HiltComponents_SingletonC extends UniApp_HiltCom
 
     }
 
+    private AuctionDiaryViewModel auctionDiaryViewModel() {
+      return new AuctionDiaryViewModel(ApplicationContextModule_ProvideContextFactory.provideContext(singletonC.applicationContextModule));
+    }
+
     @SuppressWarnings("unchecked")
     private void initialize(final SavedStateHandle savedStateHandleParam) {
-      this.writeAuctionViewModelProvider = new SwitchingProvider<>(singletonC, activityRetainedCImpl, viewModelCImpl, 0);
+      this.auctionDiaryViewModelProvider = new SwitchingProvider<>(singletonC, activityRetainedCImpl, viewModelCImpl, 0);
+      this.writeAuctionViewModelProvider = new SwitchingProvider<>(singletonC, activityRetainedCImpl, viewModelCImpl, 1);
     }
 
     @Override
     public Map<String, Provider<ViewModel>> getHiltViewModelMap() {
-      return Collections.<String, Provider<ViewModel>>singletonMap("kr.uni.auctiondiary.ui.activity.WriteAuctionViewModel", (Provider) writeAuctionViewModelProvider);
+      return MapBuilder.<String, Provider<ViewModel>>newMapBuilder(2).put("kr.uni.auctiondiary.ui.fragment.diary.AuctionDiaryViewModel", (Provider) auctionDiaryViewModelProvider).put("kr.uni.auctiondiary.ui.activity.WriteAuctionViewModel", (Provider) writeAuctionViewModelProvider).build();
     }
 
     private static final class SwitchingProvider<T> implements Provider<T> {
@@ -498,7 +455,10 @@ public final class DaggerUniApp_HiltComponents_SingletonC extends UniApp_HiltCom
       @Override
       public T get() {
         switch (id) {
-          case 0: // kr.uni.auctiondiary.ui.activity.WriteAuctionViewModel 
+          case 0: // kr.uni.auctiondiary.ui.fragment.diary.AuctionDiaryViewModel 
+          return (T) viewModelCImpl.auctionDiaryViewModel();
+
+          case 1: // kr.uni.auctiondiary.ui.activity.WriteAuctionViewModel 
           return (T) new WriteAuctionViewModel();
 
           default: throw new AssertionError(id);

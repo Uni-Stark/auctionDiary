@@ -45,6 +45,7 @@ import dagger.hilt.migration.DisableInstallInCheck;
 import javax.inject.Singleton;
 import kr.uni.auctiondiary.ui.activity.WriteAuctionActivity_GeneratedInjector;
 import kr.uni.auctiondiary.ui.activity.WriteAuctionViewModel_HiltModules;
+import kr.uni.auctiondiary.ui.fragment.diary.AuctionDiaryViewModel_HiltModules;
 import kr.uni.auctiondiary.ui.fragment.diary.FragmentAuctionDiary_GeneratedInjector;
 import kr.uni.auctiondiary.ui.main.MainActivity_GeneratedInjector;
 
@@ -141,6 +142,7 @@ public final class UniApp_HiltComponents {
 
   @Subcomponent(
       modules = {
+          AuctionDiaryViewModel_HiltModules.KeyModule.class,
           HiltWrapper_ActivityRetainedComponentManager_LifecycleModule.class,
           ActivityCBuilderModule.class,
           ViewModelCBuilderModule.class,
@@ -182,6 +184,7 @@ public final class UniApp_HiltComponents {
 
   @Subcomponent(
       modules = {
+          AuctionDiaryViewModel_HiltModules.BindsModule.class,
           HiltWrapper_HiltViewModelFactory_ViewModelModule.class,
           WriteAuctionViewModel_HiltModules.BindsModule.class
       }

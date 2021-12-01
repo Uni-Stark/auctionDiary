@@ -6,22 +6,22 @@
 6
 7    <uses-sdk
 8        android:minSdkVersion="26"
-8-->C:\Users\kgo07\Desktop\auctiondiary\app\src\main\AndroidManifest.xml
+8-->C:\Users\kgo07\Desktop\auctionDiary\app\src\main\AndroidManifest.xml
 9        android:targetSdkVersion="31" />
-9-->C:\Users\kgo07\Desktop\auctiondiary\app\src\main\AndroidManifest.xml
+9-->C:\Users\kgo07\Desktop\auctionDiary\app\src\main\AndroidManifest.xml
 10
 11    <uses-permission android:name="android.permission.INTERNET" />
-11-->C:\Users\kgo07\Desktop\auctiondiary\app\src\main\AndroidManifest.xml:5:5-67
-11-->C:\Users\kgo07\Desktop\auctiondiary\app\src\main\AndroidManifest.xml:5:22-64
+11-->C:\Users\kgo07\Desktop\auctionDiary\app\src\main\AndroidManifest.xml:5:5-67
+11-->C:\Users\kgo07\Desktop\auctionDiary\app\src\main\AndroidManifest.xml:5:22-64
 12    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-12-->C:\Users\kgo07\Desktop\auctiondiary\app\src\main\AndroidManifest.xml:6:5-79
-12-->C:\Users\kgo07\Desktop\auctiondiary\app\src\main\AndroidManifest.xml:6:22-76
+12-->C:\Users\kgo07\Desktop\auctionDiary\app\src\main\AndroidManifest.xml:6:5-79
+12-->C:\Users\kgo07\Desktop\auctionDiary\app\src\main\AndroidManifest.xml:6:22-76
 13    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-13-->C:\Users\kgo07\Desktop\auctiondiary\app\src\main\AndroidManifest.xml:7:5-81
-13-->C:\Users\kgo07\Desktop\auctiondiary\app\src\main\AndroidManifest.xml:7:22-78
+13-->C:\Users\kgo07\Desktop\auctionDiary\app\src\main\AndroidManifest.xml:7:5-81
+13-->C:\Users\kgo07\Desktop\auctionDiary\app\src\main\AndroidManifest.xml:7:22-78
 14    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
-14-->C:\Users\kgo07\Desktop\auctiondiary\app\src\main\AndroidManifest.xml:8:5-84
-14-->C:\Users\kgo07\Desktop\auctiondiary\app\src\main\AndroidManifest.xml:8:22-82
+14-->C:\Users\kgo07\Desktop\auctionDiary\app\src\main\AndroidManifest.xml:8:5-84
+14-->C:\Users\kgo07\Desktop\auctionDiary\app\src\main\AndroidManifest.xml:8:22-82
 15    <uses-permission android:name="android.permission.USE_BIOMETRIC" /> <!-- suppress DeprecatedClassUsageInspection -->
 15-->[androidx.biometric:biometric:1.1.0] C:\Users\kgo07\.gradle\caches\transforms-3\d93cc9f81c2dc28e219021e1a4626608\transformed\biometric-1.1.0\AndroidManifest.xml:24:5-72
 15-->[androidx.biometric:biometric:1.1.0] C:\Users\kgo07\.gradle\caches\transforms-3\d93cc9f81c2dc28e219021e1a4626608\transformed\biometric-1.1.0\AndroidManifest.xml:24:22-69
@@ -49,59 +49,59 @@
 27    </queries>
 28
 29    <application
-29-->C:\Users\kgo07\Desktop\auctiondiary\app\src\main\AndroidManifest.xml:10:5-29:19
+29-->C:\Users\kgo07\Desktop\auctionDiary\app\src\main\AndroidManifest.xml:10:5-29:19
 30        android:name="kr.uni.auctiondiary.util.UniApp"
-30-->C:\Users\kgo07\Desktop\auctiondiary\app\src\main\AndroidManifest.xml:11:9-36
+30-->C:\Users\kgo07\Desktop\auctionDiary\app\src\main\AndroidManifest.xml:11:9-36
 31        android:allowBackup="true"
-31-->C:\Users\kgo07\Desktop\auctiondiary\app\src\main\AndroidManifest.xml:12:9-35
+31-->C:\Users\kgo07\Desktop\auctionDiary\app\src\main\AndroidManifest.xml:12:9-35
 32        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
 32-->[androidx.core:core:1.7.0] C:\Users\kgo07\.gradle\caches\transforms-3\0bdb6f05934bed3700e04a03de3c72aa\transformed\core-1.7.0\AndroidManifest.xml:24:18-86
 33        android:debuggable="true"
 34        android:extractNativeLibs="false"
 35        android:icon="@mipmap/ic_launcher"
-35-->C:\Users\kgo07\Desktop\auctiondiary\app\src\main\AndroidManifest.xml:13:9-43
+35-->C:\Users\kgo07\Desktop\auctionDiary\app\src\main\AndroidManifest.xml:13:9-43
 36        android:label="@string/app_name"
-36-->C:\Users\kgo07\Desktop\auctiondiary\app\src\main\AndroidManifest.xml:14:9-41
+36-->C:\Users\kgo07\Desktop\auctionDiary\app\src\main\AndroidManifest.xml:14:9-41
 37        android:roundIcon="@mipmap/ic_launcher_round"
-37-->C:\Users\kgo07\Desktop\auctiondiary\app\src\main\AndroidManifest.xml:15:9-54
+37-->C:\Users\kgo07\Desktop\auctionDiary\app\src\main\AndroidManifest.xml:15:9-54
 38        android:supportsRtl="true"
-38-->C:\Users\kgo07\Desktop\auctiondiary\app\src\main\AndroidManifest.xml:16:9-35
+38-->C:\Users\kgo07\Desktop\auctionDiary\app\src\main\AndroidManifest.xml:16:9-35
 39        android:testOnly="true"
 40        android:theme="@style/Theme.Auctiondiary" >
-40-->C:\Users\kgo07\Desktop\auctiondiary\app\src\main\AndroidManifest.xml:17:9-50
+40-->C:\Users\kgo07\Desktop\auctionDiary\app\src\main\AndroidManifest.xml:17:9-50
 41        <activity
-41-->C:\Users\kgo07\Desktop\auctiondiary\app\src\main\AndroidManifest.xml:18:9-26:20
+41-->C:\Users\kgo07\Desktop\auctionDiary\app\src\main\AndroidManifest.xml:18:9-26:20
 42            android:name="kr.uni.auctiondiary.ui.main.MainActivity"
-42-->C:\Users\kgo07\Desktop\auctiondiary\app\src\main\AndroidManifest.xml:19:13-68
+42-->C:\Users\kgo07\Desktop\auctionDiary\app\src\main\AndroidManifest.xml:19:13-68
 43            android:exported="true" >
-43-->C:\Users\kgo07\Desktop\auctiondiary\app\src\main\AndroidManifest.xml:20:13-36
+43-->C:\Users\kgo07\Desktop\auctionDiary\app\src\main\AndroidManifest.xml:20:13-36
 44            <intent-filter>
-44-->C:\Users\kgo07\Desktop\auctiondiary\app\src\main\AndroidManifest.xml:21:13-25:29
+44-->C:\Users\kgo07\Desktop\auctionDiary\app\src\main\AndroidManifest.xml:21:13-25:29
 45                <action android:name="android.intent.action.MAIN" />
-45-->C:\Users\kgo07\Desktop\auctiondiary\app\src\main\AndroidManifest.xml:22:17-69
-45-->C:\Users\kgo07\Desktop\auctiondiary\app\src\main\AndroidManifest.xml:22:25-66
+45-->C:\Users\kgo07\Desktop\auctionDiary\app\src\main\AndroidManifest.xml:22:17-69
+45-->C:\Users\kgo07\Desktop\auctionDiary\app\src\main\AndroidManifest.xml:22:25-66
 46
 47                <category android:name="android.intent.category.LAUNCHER" />
-47-->C:\Users\kgo07\Desktop\auctiondiary\app\src\main\AndroidManifest.xml:24:17-77
-47-->C:\Users\kgo07\Desktop\auctiondiary\app\src\main\AndroidManifest.xml:24:27-74
+47-->C:\Users\kgo07\Desktop\auctionDiary\app\src\main\AndroidManifest.xml:24:17-77
+47-->C:\Users\kgo07\Desktop\auctionDiary\app\src\main\AndroidManifest.xml:24:27-74
 48            </intent-filter>
 49        </activity>
 50        <activity android:name="kr.uni.auctiondiary.ui.activity.WriteAuctionActivity" />
-50-->C:\Users\kgo07\Desktop\auctiondiary\app\src\main\AndroidManifest.xml:27:9-70
-50-->C:\Users\kgo07\Desktop\auctiondiary\app\src\main\AndroidManifest.xml:27:19-67
+50-->C:\Users\kgo07\Desktop\auctionDiary\app\src\main\AndroidManifest.xml:27:9-70
+50-->C:\Users\kgo07\Desktop\auctionDiary\app\src\main\AndroidManifest.xml:27:19-67
 51        <activity android:name="kr.uni.auctiondiary.util.BaseActivity" />
-51-->C:\Users\kgo07\Desktop\auctiondiary\app\src\main\AndroidManifest.xml:28:9-55
-51-->C:\Users\kgo07\Desktop\auctiondiary\app\src\main\AndroidManifest.xml:28:19-52
+51-->C:\Users\kgo07\Desktop\auctionDiary\app\src\main\AndroidManifest.xml:28:9-55
+51-->C:\Users\kgo07\Desktop\auctionDiary\app\src\main\AndroidManifest.xml:28:19-52
 52        <activity
-52-->[gun0912.ted:tedpermission:2.2.3] C:\Users\kgo07\.gradle\caches\transforms-3\8feb4abbc961b72eba11d80e5a1bf0a0\transformed\jetified-tedpermission-2.2.3\AndroidManifest.xml:10:9-14:67
+52-->[gun0912.ted:tedpermission:2.2.3] C:\Users\kgo07\.gradle\caches\transforms-3\fe189e6b5b7f1b92c7a30e21e52c4634\transformed\jetified-tedpermission-2.2.3\AndroidManifest.xml:10:9-14:67
 53            android:name="com.gun0912.tedpermission.TedPermissionActivity"
-53-->[gun0912.ted:tedpermission:2.2.3] C:\Users\kgo07\.gradle\caches\transforms-3\8feb4abbc961b72eba11d80e5a1bf0a0\transformed\jetified-tedpermission-2.2.3\AndroidManifest.xml:11:13-75
+53-->[gun0912.ted:tedpermission:2.2.3] C:\Users\kgo07\.gradle\caches\transforms-3\fe189e6b5b7f1b92c7a30e21e52c4634\transformed\jetified-tedpermission-2.2.3\AndroidManifest.xml:11:13-75
 54            android:configChanges="mcc|mnc|locale|keyboard|keyboardHidden|screenLayout|fontScale|uiMode|orientation|screenSize|layoutDirection"
-54-->[gun0912.ted:tedpermission:2.2.3] C:\Users\kgo07\.gradle\caches\transforms-3\8feb4abbc961b72eba11d80e5a1bf0a0\transformed\jetified-tedpermission-2.2.3\AndroidManifest.xml:12:13-144
+54-->[gun0912.ted:tedpermission:2.2.3] C:\Users\kgo07\.gradle\caches\transforms-3\fe189e6b5b7f1b92c7a30e21e52c4634\transformed\jetified-tedpermission-2.2.3\AndroidManifest.xml:12:13-144
 55            android:screenOrientation="unspecified"
-55-->[gun0912.ted:tedpermission:2.2.3] C:\Users\kgo07\.gradle\caches\transforms-3\8feb4abbc961b72eba11d80e5a1bf0a0\transformed\jetified-tedpermission-2.2.3\AndroidManifest.xml:13:13-52
+55-->[gun0912.ted:tedpermission:2.2.3] C:\Users\kgo07\.gradle\caches\transforms-3\fe189e6b5b7f1b92c7a30e21e52c4634\transformed\jetified-tedpermission-2.2.3\AndroidManifest.xml:13:13-52
 56            android:theme="@style/Theme.Transparent.Permission" />
-56-->[gun0912.ted:tedpermission:2.2.3] C:\Users\kgo07\.gradle\caches\transforms-3\8feb4abbc961b72eba11d80e5a1bf0a0\transformed\jetified-tedpermission-2.2.3\AndroidManifest.xml:14:13-64
+56-->[gun0912.ted:tedpermission:2.2.3] C:\Users\kgo07\.gradle\caches\transforms-3\fe189e6b5b7f1b92c7a30e21e52c4634\transformed\jetified-tedpermission-2.2.3\AndroidManifest.xml:14:13-64
 57
 58        <service
 58-->[androidx.room:room-runtime:2.3.0] C:\Users\kgo07\.gradle\caches\transforms-3\bfb529ac860859b1ec28a21bc6a2cf54\transformed\room-runtime-2.3.0\AndroidManifest.xml:25:9-28:40
