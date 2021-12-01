@@ -6,6 +6,8 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.bumptech.glide.request.RequestOptions
+import kr.uni.auctiondiary.R
 import kr.uni.auctiondiary.databinding.ListAuctionNoteBinding
 import kr.uni.auctiondiary.util.database.entity.AuctionNoteEntity
 
@@ -18,7 +20,7 @@ class AuctionDiaryAdapter() :
     ): AuctionDiaryAdapter.ViewHolder {
 
         return ViewHolder(
-           ListAuctionNoteBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+            ListAuctionNoteBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         )
     }
 
@@ -42,14 +44,15 @@ class AuctionDiaryAdapter() :
 
         private fun setTag(tag: String) {
             //Parsing 해줘야함
+            binding.auctionNoteListTag.text = tag
         }
 
         private fun setImage(path: String) {
             Glide.with(binding.root.context)
                 .load(path)
                 // error 처리해줘야함
-                // .error()
-
+                .error(R.drawable.ic_launcher_background)
+                .apply(RequestOptions().circleCrop())
                 .into(binding.auctionNoteListImage)
         }
     }

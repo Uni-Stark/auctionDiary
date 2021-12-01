@@ -1,5 +1,6 @@
 package kr.uni.auctiondiary.util;
 
+import androidx.hilt.lifecycle.ViewModelFactoryModules;
 import dagger.Binds;
 import dagger.Component;
 import dagger.Module;
@@ -42,6 +43,8 @@ import dagger.hilt.components.SingletonComponent;
 import dagger.hilt.internal.GeneratedComponent;
 import dagger.hilt.migration.DisableInstallInCheck;
 import javax.inject.Singleton;
+import kr.uni.auctiondiary.ui.activity.WriteAuctionActivity_GeneratedInjector;
+import kr.uni.auctiondiary.ui.activity.WriteAuctionViewModel_HiltModules;
 import kr.uni.auctiondiary.ui.fragment.diary.FragmentAuctionDiary_GeneratedInjector;
 import kr.uni.auctiondiary.ui.main.MainActivity_GeneratedInjector;
 
@@ -140,7 +143,8 @@ public final class UniApp_HiltComponents {
       modules = {
           HiltWrapper_ActivityRetainedComponentManager_LifecycleModule.class,
           ActivityCBuilderModule.class,
-          ViewModelCBuilderModule.class
+          ViewModelCBuilderModule.class,
+          WriteAuctionViewModel_HiltModules.KeyModule.class
       }
   )
   @ActivityRetainedScoped
@@ -158,7 +162,8 @@ public final class UniApp_HiltComponents {
           HiltWrapper_ActivityModule.class,
           HiltWrapper_DefaultViewModelFactories_ActivityModule.class,
           FragmentCBuilderModule.class,
-          ViewCBuilderModule.class
+          ViewCBuilderModule.class,
+          ViewModelFactoryModules.ActivityModule.class
       }
   )
   @ActivityScoped
@@ -168,6 +173,7 @@ public final class UniApp_HiltComponents {
       FragmentComponentManager.FragmentComponentBuilderEntryPoint,
       ViewComponentManager.ViewComponentBuilderEntryPoint,
       GeneratedComponent,
+      WriteAuctionActivity_GeneratedInjector,
       MainActivity_GeneratedInjector {
     @Subcomponent.Builder
     abstract interface Builder extends ActivityComponentBuilder {
@@ -175,7 +181,10 @@ public final class UniApp_HiltComponents {
   }
 
   @Subcomponent(
-      modules = HiltWrapper_HiltViewModelFactory_ViewModelModule.class
+      modules = {
+          HiltWrapper_HiltViewModelFactory_ViewModelModule.class,
+          WriteAuctionViewModel_HiltModules.BindsModule.class
+      }
   )
   @ViewModelScoped
   public abstract static class ViewModelC implements ViewModelComponent,
@@ -196,7 +205,10 @@ public final class UniApp_HiltComponents {
   }
 
   @Subcomponent(
-      modules = ViewWithFragmentCBuilderModule.class
+      modules = {
+          ViewWithFragmentCBuilderModule.class,
+          ViewModelFactoryModules.FragmentModule.class
+      }
   )
   @FragmentScoped
   public abstract static class FragmentC implements FragmentComponent,

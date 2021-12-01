@@ -1,5 +1,6 @@
 package kr.uni.auctiondiary.ui.fragment.diary;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -8,11 +9,16 @@ import androidx.databinding.DataBindingUtil;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import dagger.hilt.android.AndroidEntryPoint;
+import kotlinx.coroutines.*;
 import kr.uni.auctiondiary.R;
 import kr.uni.auctiondiary.databinding.FragmentAuctionDiaryBinding;
+import kr.uni.auctiondiary.ui.activity.WriteAuctionActivity;
+import kr.uni.auctiondiary.util.database.entity.AuctionNoteEntity;
+import kr.uni.auctiondiary.util.database.repo.AuctionNoteRepo;
 import java.util.*;
 import javax.inject.Inject;
 
+@kotlinx.coroutines.InternalCoroutinesApi()
 @kotlin.Metadata(mv = {1, 5, 1}, k = 1, d1 = {"\u0000L\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0010\u0002\n\u0002\b\u0002\n\u0002\u0010\b\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0004\b\u0007\u0018\u0000 $2\u00020\u0001:\u0001$B\u0005\u00a2\u0006\u0002\u0010\u0002J\b\u0010\u0015\u001a\u00020\u0016H\u0002J\u0010\u0010\u0017\u001a\u00020\u00162\u0006\u0010\u0018\u001a\u00020\u0019H\u0002J$\u0010\u001a\u001a\u00020\u001b2\u0006\u0010\u001c\u001a\u00020\u001d2\b\u0010\u001e\u001a\u0004\u0018\u00010\u001f2\b\u0010 \u001a\u0004\u0018\u00010!H\u0016J\u001a\u0010\"\u001a\u00020\u00162\u0006\u0010#\u001a\u00020\u001b2\b\u0010 \u001a\u0004\u0018\u00010!H\u0016R\u001a\u0010\u0003\u001a\u00020\u0004X\u0086.\u00a2\u0006\u000e\n\u0000\u001a\u0004\b\u0005\u0010\u0006\"\u0004\b\u0007\u0010\bR\u001a\u0010\t\u001a\u00020\nX\u0086.\u00a2\u0006\u000e\n\u0000\u001a\u0004\b\u000b\u0010\f\"\u0004\b\r\u0010\u000eR\u001e\u0010\u000f\u001a\u00020\u00108\u0006@\u0006X\u0087.\u00a2\u0006\u000e\n\u0000\u001a\u0004\b\u0011\u0010\u0012\"\u0004\b\u0013\u0010\u0014\u00a8\u0006%"}, d2 = {"Lkr/uni/auctiondiary/ui/fragment/diary/FragmentAuctionDiary;", "Landroidx/fragment/app/Fragment;", "()V", "adapter", "Lkr/uni/auctiondiary/ui/fragment/diary/AuctionDiaryAdapter;", "getAdapter", "()Lkr/uni/auctiondiary/ui/fragment/diary/AuctionDiaryAdapter;", "setAdapter", "(Lkr/uni/auctiondiary/ui/fragment/diary/AuctionDiaryAdapter;)V", "binding", "Lkr/uni/auctiondiary/databinding/FragmentAuctionDiaryBinding;", "getBinding", "()Lkr/uni/auctiondiary/databinding/FragmentAuctionDiaryBinding;", "setBinding", "(Lkr/uni/auctiondiary/databinding/FragmentAuctionDiaryBinding;)V", "viewModel", "Lkr/uni/auctiondiary/ui/fragment/diary/AuctionDiaryViewModel;", "getViewModel", "()Lkr/uni/auctiondiary/ui/fragment/diary/AuctionDiaryViewModel;", "setViewModel", "(Lkr/uni/auctiondiary/ui/fragment/diary/AuctionDiaryViewModel;)V", "initList", "", "listSetOnMainThread", "state", "", "onCreateView", "Landroid/view/View;", "inflater", "Landroid/view/LayoutInflater;", "container", "Landroid/view/ViewGroup;", "savedInstanceState", "Landroid/os/Bundle;", "onViewCreated", "view", "Companion", "app_debug"})
 @dagger.hilt.android.AndroidEntryPoint()
 public final class FragmentAuctionDiary extends androidx.fragment.app.Fragment {

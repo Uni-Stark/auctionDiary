@@ -6,13 +6,16 @@ import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.FragmentActivity
 import com.google.android.material.tabs.TabLayoutMediator
 import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.coroutines.InternalCoroutinesApi
 import kr.uni.auctiondiary.R
 import kr.uni.auctiondiary.databinding.ActivityMainBinding
+import kr.uni.auctiondiary.util.BaseActivity
 import javax.inject.Inject
 
 
 @AndroidEntryPoint
-class MainActivity : AppCompatActivity() {
+@InternalCoroutinesApi
+class MainActivity : BaseActivity() {
     @Inject
     lateinit var viewModel: MainViewModel
     lateinit var binding: ActivityMainBinding

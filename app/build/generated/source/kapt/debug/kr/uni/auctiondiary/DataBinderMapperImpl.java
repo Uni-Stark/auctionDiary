@@ -16,6 +16,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import kr.uni.auctiondiary.databinding.ActivityMainBindingImpl;
+import kr.uni.auctiondiary.databinding.ActivityWriteAuctionBindingImpl;
 import kr.uni.auctiondiary.databinding.FragmentAuctionBindingImpl;
 import kr.uni.auctiondiary.databinding.FragmentAuctionDiaryBindingImpl;
 import kr.uni.auctiondiary.databinding.FragmentBoardBindingImpl;
@@ -24,18 +25,21 @@ import kr.uni.auctiondiary.databinding.FragmentSettingBindingImpl;
 public class DataBinderMapperImpl extends DataBinderMapper {
   private static final int LAYOUT_ACTIVITYMAIN = 1;
 
-  private static final int LAYOUT_FRAGMENTAUCTION = 2;
+  private static final int LAYOUT_ACTIVITYWRITEAUCTION = 2;
 
-  private static final int LAYOUT_FRAGMENTAUCTIONDIARY = 3;
+  private static final int LAYOUT_FRAGMENTAUCTION = 3;
 
-  private static final int LAYOUT_FRAGMENTBOARD = 4;
+  private static final int LAYOUT_FRAGMENTAUCTIONDIARY = 4;
 
-  private static final int LAYOUT_FRAGMENTSETTING = 5;
+  private static final int LAYOUT_FRAGMENTBOARD = 5;
 
-  private static final SparseIntArray INTERNAL_LAYOUT_ID_LOOKUP = new SparseIntArray(5);
+  private static final int LAYOUT_FRAGMENTSETTING = 6;
+
+  private static final SparseIntArray INTERNAL_LAYOUT_ID_LOOKUP = new SparseIntArray(6);
 
   static {
     INTERNAL_LAYOUT_ID_LOOKUP.put(kr.uni.auctiondiary.R.layout.activity_main, LAYOUT_ACTIVITYMAIN);
+    INTERNAL_LAYOUT_ID_LOOKUP.put(kr.uni.auctiondiary.R.layout.activity_write_auction, LAYOUT_ACTIVITYWRITEAUCTION);
     INTERNAL_LAYOUT_ID_LOOKUP.put(kr.uni.auctiondiary.R.layout.fragment_auction, LAYOUT_FRAGMENTAUCTION);
     INTERNAL_LAYOUT_ID_LOOKUP.put(kr.uni.auctiondiary.R.layout.fragment_auction_diary, LAYOUT_FRAGMENTAUCTIONDIARY);
     INTERNAL_LAYOUT_ID_LOOKUP.put(kr.uni.auctiondiary.R.layout.fragment_board, LAYOUT_FRAGMENTBOARD);
@@ -56,6 +60,12 @@ public class DataBinderMapperImpl extends DataBinderMapper {
             return new ActivityMainBindingImpl(component, view);
           }
           throw new IllegalArgumentException("The tag for activity_main is invalid. Received: " + tag);
+        }
+        case  LAYOUT_ACTIVITYWRITEAUCTION: {
+          if ("layout/activity_write_auction_0".equals(tag)) {
+            return new ActivityWriteAuctionBindingImpl(component, view);
+          }
+          throw new IllegalArgumentException("The tag for activity_write_auction is invalid. Received: " + tag);
         }
         case  LAYOUT_FRAGMENTAUCTION: {
           if ("layout/fragment_auction_0".equals(tag)) {
@@ -126,20 +136,22 @@ public class DataBinderMapperImpl extends DataBinderMapper {
   }
 
   private static class InnerBrLookup {
-    static final SparseArray<String> sKeys = new SparseArray<String>(3);
+    static final SparseArray<String> sKeys = new SparseArray<String>(4);
 
     static {
       sKeys.put(0, "_all");
       sKeys.put(1, "activity");
       sKeys.put(2, "fm");
+      sKeys.put(3, "vm");
     }
   }
 
   private static class InnerLayoutIdLookup {
-    static final HashMap<String, Integer> sKeys = new HashMap<String, Integer>(5);
+    static final HashMap<String, Integer> sKeys = new HashMap<String, Integer>(6);
 
     static {
       sKeys.put("layout/activity_main_0", kr.uni.auctiondiary.R.layout.activity_main);
+      sKeys.put("layout/activity_write_auction_0", kr.uni.auctiondiary.R.layout.activity_write_auction);
       sKeys.put("layout/fragment_auction_0", kr.uni.auctiondiary.R.layout.fragment_auction);
       sKeys.put("layout/fragment_auction_diary_0", kr.uni.auctiondiary.R.layout.fragment_auction_diary);
       sKeys.put("layout/fragment_board_0", kr.uni.auctiondiary.R.layout.fragment_board);

@@ -1,22 +1,26 @@
 package kr.uni.auctiondiary.ui.fragment.diary
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import dagger.hilt.android.AndroidEntryPoint
-import kotlinx.coroutines.launch
+import kotlinx.coroutines.*
 import kr.uni.auctiondiary.R
 import kr.uni.auctiondiary.databinding.FragmentAuctionDiaryBinding
+import kr.uni.auctiondiary.ui.activity.WriteAuctionActivity
+import kr.uni.auctiondiary.util.database.entity.AuctionNoteEntity
+import kr.uni.auctiondiary.util.database.repo.AuctionNoteRepo
 import java.util.*
 import javax.inject.Inject
 
 
 @AndroidEntryPoint
+@InternalCoroutinesApi
 class FragmentAuctionDiary : Fragment() {
     @Inject
     lateinit var viewModel: AuctionDiaryViewModel
@@ -31,6 +35,9 @@ class FragmentAuctionDiary : Fragment() {
         binding.apply {
             fm = this@FragmentAuctionDiary
             lifecycleOwner = this@FragmentAuctionDiary
+            floatingButton.setOnClickListener {
+                startActivity(Intent(requireContext(), WriteAuctionActivity::class.java))
+            }
         }
         return binding.root
     }
@@ -51,32 +58,42 @@ class FragmentAuctionDiary : Fragment() {
         binding.list.adapter = adapter
         binding.list.layoutManager = lm
 
-        lifecycleScope.launch { // lifeCycleScope안에서 돌게 하기
-            viewModel.fetchAuctionNoteData().observe(viewLifecycleOwner) { data ->
-                // Data Null Check 후 없다면 없다는 표시 내보내기
-                // 현재는 isNotEmpty를 사용하여 Empty가 아니면 데이터를 세팅해줌
-                // else에다가 데이터가 없으면 아무것도 없다는 표시를 내보내주게 하기
-                if (data.isNotEmpty()) {
-                    adapter.submitList(data)
-                    listSetOnMainThread(SHOW_LIST)
-                } else {
-                    listSetOnMainThread(SHOW_EMPTY_LIST)
+        CoroutineScope(Dispatchers.IO).launch { // lifeCycleScope안에서 돌게 하기
+            //Test Data
+//            AuctionNoteRepo(requireContext()).insert(
+//                AuctionNoteEntity(
+//                    idx = 0,
+//                    tag = "t",
+//                    place = "PLACE",
+//                    picturePath = "PATH"
+//                )
+//            )
+            CoroutineScope(Dispatchers.Main).launch {
+
+                viewModel.fetchAuctionNoteData().observe(viewLifecycleOwner) { data ->
+                    // Data Null Check 후 없다면 없다는 표시 내보내기
+                    // 현재는 isNotEmpty를 사용하여 Empty가 아니면 데이터를 세팅해줌
+                    // else에다가 데이터가 없으면 아무것도 없다는 표시를 내보내주게 하기
+                    if (data.isNotEmpty()) {
+                        adapter.submitList(data)
+                        listSetOnMainThread(SHOW_LIST)
+                    } else {
+                        listSetOnMainThread(SHOW_EMPTY_LIST)
+                    }
                 }
             }
         }
     }
 
     private fun listSetOnMainThread(state: Int) {
-        activity?.runOnUiThread {
-            when (state) {
-                SHOW_LIST -> {
-                    binding.list.visibility = View.VISIBLE
-                    binding.noAuctionListContainer.visibility = View.GONE
-                }
-                SHOW_EMPTY_LIST -> {
-                    binding.list.visibility = View.GONE
-                    binding.noAuctionListContainer.visibility = View.VISIBLE
-                }
+        when (state) {
+            SHOW_LIST -> {
+                binding.list.visibility = View.VISIBLE
+                binding.noAuctionListContainer.visibility = View.GONE
+            }
+            SHOW_EMPTY_LIST -> {
+                binding.list.visibility = View.GONE
+                binding.noAuctionListContainer.visibility = View.VISIBLE
             }
         }
     }

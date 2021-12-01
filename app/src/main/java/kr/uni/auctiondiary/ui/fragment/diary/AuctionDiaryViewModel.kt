@@ -10,20 +10,22 @@ import kotlinx.coroutines.InternalCoroutinesApi
 import kr.uni.auctiondiary.util.database.AppDatabase
 import kr.uni.auctiondiary.util.database.dao.AuctionNoteDao
 import kr.uni.auctiondiary.util.database.entity.AuctionNoteEntity
+import kr.uni.auctiondiary.util.database.repo.AuctionNoteRepo
 import javax.inject.Inject
 
 @FragmentScoped
 class AuctionDiaryViewModel @Inject constructor(@ApplicationContext context: Context) :
     ViewModel() {
     @OptIn(InternalCoroutinesApi::class)
-    private val database = AppDatabase.getInstance(context)
+    private val database = AuctionNoteRepo(context)
 
 
     /**
      *  @return_LiveData_for_automatically_refresh_recycler_view
      */
+    @InternalCoroutinesApi
     fun fetchAuctionNoteData(): LiveData<List<AuctionNoteEntity>> =
-        database.auctionNoteDao().fetchAll()
+        database.fetchAll()
 
 
     fun getCurrentLocation(context: Context): String {

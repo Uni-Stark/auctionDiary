@@ -28,6 +28,9 @@ import java.util.Collections;
 import java.util.Map;
 import java.util.Set;
 import javax.inject.Provider;
+import kr.uni.auctiondiary.ui.activity.WriteAuctionActivity;
+import kr.uni.auctiondiary.ui.activity.WriteAuctionViewModel;
+import kr.uni.auctiondiary.ui.activity.WriteAuctionViewModel_HiltModules_KeyModule_ProvideFactory;
 import kr.uni.auctiondiary.ui.fragment.diary.AuctionDiaryViewModel;
 import kr.uni.auctiondiary.ui.fragment.diary.FragmentAuctionDiary;
 import kr.uni.auctiondiary.ui.fragment.diary.FragmentAuctionDiary_MembersInjector;
@@ -408,12 +411,12 @@ public final class DaggerUniApp_HiltComponents_SingletonC extends UniApp_HiltCom
 
     @Override
     public DefaultViewModelFactories.InternalFactoryFactory getHiltInternalFactoryFactory() {
-      return DefaultViewModelFactories_InternalFactoryFactory_Factory.newInstance(ApplicationContextModule_ProvideApplicationFactory.provideApplication(singletonC.applicationContextModule), Collections.<String>emptySet(), new ViewModelCBuilder(singletonC, activityRetainedCImpl));
+      return DefaultViewModelFactories_InternalFactoryFactory_Factory.newInstance(ApplicationContextModule_ProvideApplicationFactory.provideApplication(singletonC.applicationContextModule), getViewModelKeys(), new ViewModelCBuilder(singletonC, activityRetainedCImpl));
     }
 
     @Override
     public Set<String> getViewModelKeys() {
-      return Collections.<String>emptySet();
+      return Collections.<String>singleton(WriteAuctionViewModel_HiltModules_KeyModule_ProvideFactory.provide());
     }
 
     @Override
@@ -429,6 +432,10 @@ public final class DaggerUniApp_HiltComponents_SingletonC extends UniApp_HiltCom
     @Override
     public ViewComponentBuilder viewComponentBuilder() {
       return new ViewCBuilder(singletonC, activityRetainedCImpl, activityCImpl);
+    }
+
+    @Override
+    public void injectWriteAuctionActivity(WriteAuctionActivity writeAuctionActivity) {
     }
 
     @Override
@@ -449,17 +456,54 @@ public final class DaggerUniApp_HiltComponents_SingletonC extends UniApp_HiltCom
 
     private final ViewModelCImpl viewModelCImpl = this;
 
+    private Provider<WriteAuctionViewModel> writeAuctionViewModelProvider;
+
     private ViewModelCImpl(DaggerUniApp_HiltComponents_SingletonC singletonC,
         ActivityRetainedCImpl activityRetainedCImpl, SavedStateHandle savedStateHandleParam) {
       this.singletonC = singletonC;
       this.activityRetainedCImpl = activityRetainedCImpl;
 
+      initialize(savedStateHandleParam);
 
+    }
+
+    @SuppressWarnings("unchecked")
+    private void initialize(final SavedStateHandle savedStateHandleParam) {
+      this.writeAuctionViewModelProvider = new SwitchingProvider<>(singletonC, activityRetainedCImpl, viewModelCImpl, 0);
     }
 
     @Override
     public Map<String, Provider<ViewModel>> getHiltViewModelMap() {
-      return Collections.<String, Provider<ViewModel>>emptyMap();
+      return Collections.<String, Provider<ViewModel>>singletonMap("kr.uni.auctiondiary.ui.activity.WriteAuctionViewModel", (Provider) writeAuctionViewModelProvider);
+    }
+
+    private static final class SwitchingProvider<T> implements Provider<T> {
+      private final DaggerUniApp_HiltComponents_SingletonC singletonC;
+
+      private final ActivityRetainedCImpl activityRetainedCImpl;
+
+      private final ViewModelCImpl viewModelCImpl;
+
+      private final int id;
+
+      SwitchingProvider(DaggerUniApp_HiltComponents_SingletonC singletonC,
+          ActivityRetainedCImpl activityRetainedCImpl, ViewModelCImpl viewModelCImpl, int id) {
+        this.singletonC = singletonC;
+        this.activityRetainedCImpl = activityRetainedCImpl;
+        this.viewModelCImpl = viewModelCImpl;
+        this.id = id;
+      }
+
+      @SuppressWarnings("unchecked")
+      @Override
+      public T get() {
+        switch (id) {
+          case 0: // kr.uni.auctiondiary.ui.activity.WriteAuctionViewModel 
+          return (T) new WriteAuctionViewModel();
+
+          default: throw new AssertionError(id);
+        }
+      }
     }
   }
 

@@ -7,4 +7,21 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+
+    <color name="colorMainGrey">#333333</color>
+    <color name="colorMainTextColor">#757575</color>
+    <color name="colorMainMint">#0abeb2</color>
+    <color name="colorFriendListMyProfile">#f1efef</color>
+    <color name="colorUnderline">#b5b4b4</color>
+    <color name="colorSplashBackground">#161519</color>
+    <color name="colorSplashText">#fff9f9</color>
+    <color name="colorMainDarkBlue">#396ab9</color>
+    <color name="colorMainLightGrey">#F8F8F8</color>
+    <color name="colorMainBlack">#161519</color>
+    <color name="temp">#2196F3</color>
+    <color name="colorMainBlue">#1f8de0</color>
+    <color name="colorSkyblue">#e7eff2</color>
+    <color name="talkBalloonBlue">#98DCF6</color>
+    <color name="colorMainRed">#FF3232</color>
 </resources>

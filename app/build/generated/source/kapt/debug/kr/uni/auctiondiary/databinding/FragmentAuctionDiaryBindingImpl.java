@@ -21,8 +21,6 @@ public class FragmentAuctionDiaryBindingImpl extends FragmentAuctionDiaryBinding
         sViewsWithIds.put(R.id.floatingButton, 5);
     }
     // views
-    @NonNull
-    private final androidx.constraintlayout.widget.ConstraintLayout mboundView0;
     // variables
     // values
     // listeners
@@ -35,12 +33,12 @@ public class FragmentAuctionDiaryBindingImpl extends FragmentAuctionDiaryBinding
         super(bindingComponent, root, 0
             , (com.google.android.material.floatingactionbutton.FloatingActionButton) bindings[5]
             , (androidx.recyclerview.widget.RecyclerView) bindings[1]
+            , (androidx.constraintlayout.widget.ConstraintLayout) bindings[0]
             , (androidx.constraintlayout.widget.ConstraintLayout) bindings[2]
             , (android.widget.Button) bindings[4]
             , (androidx.appcompat.widget.AppCompatTextView) bindings[3]
             );
-        this.mboundView0 = (androidx.constraintlayout.widget.ConstraintLayout) bindings[0];
-        this.mboundView0.setTag(null);
+        this.mainContainer.setTag(null);
         setRootTag(root);
         // listeners
         invalidateAll();

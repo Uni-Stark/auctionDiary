@@ -27,6 +27,9 @@ public abstract class FragmentAuctionDiaryBinding extends ViewDataBinding {
   public final RecyclerView list;
 
   @NonNull
+  public final ConstraintLayout mainContainer;
+
+  @NonNull
   public final ConstraintLayout noAuctionListContainer;
 
   @NonNull
@@ -39,12 +42,13 @@ public abstract class FragmentAuctionDiaryBinding extends ViewDataBinding {
   protected FragmentAuctionDiary mFm;
 
   protected FragmentAuctionDiaryBinding(Object _bindingComponent, View _root, int _localFieldCount,
-      FloatingActionButton floatingButton, RecyclerView list,
+      FloatingActionButton floatingButton, RecyclerView list, ConstraintLayout mainContainer,
       ConstraintLayout noAuctionListContainer, Button noDiaryButton,
       AppCompatTextView noDiaryText) {
     super(_bindingComponent, _root, _localFieldCount);
     this.floatingButton = floatingButton;
     this.list = list;
+    this.mainContainer = mainContainer;
     this.noAuctionListContainer = noAuctionListContainer;
     this.noDiaryButton = noDiaryButton;
     this.noDiaryText = noDiaryText;

@@ -2,7 +2,6 @@ package kr.uni.auctiondiary.ui.main;
 
 import android.content.Context;
 import androidx.activity.contextaware.OnContextAvailableListener;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.ViewModelProvider;
 import dagger.hilt.android.internal.lifecycle.DefaultViewModelFactories;
 import dagger.hilt.android.internal.managers.ActivityComponentManager;
@@ -10,11 +9,12 @@ import dagger.hilt.internal.GeneratedComponentManagerHolder;
 import dagger.hilt.internal.UnsafeCasts;
 import java.lang.Object;
 import java.lang.Override;
+import kr.uni.auctiondiary.util.BaseActivity;
 
 /**
  * A generated base class to be extended by the @dagger.hilt.android.AndroidEntryPoint annotated class. If using the Gradle plugin, this is swapped as the base class via bytecode transformation.
  */
-public abstract class Hilt_MainActivity extends AppCompatActivity implements GeneratedComponentManagerHolder {
+public abstract class Hilt_MainActivity extends BaseActivity implements GeneratedComponentManagerHolder {
   private volatile ActivityComponentManager componentManager;
 
   private final Object componentManagerLock = new Object();
@@ -23,11 +23,6 @@ public abstract class Hilt_MainActivity extends AppCompatActivity implements Gen
 
   Hilt_MainActivity() {
     super();
-    _initHiltInternal();
-  }
-
-  Hilt_MainActivity(int contentLayoutId) {
-    super(contentLayoutId);
     _initHiltInternal();
   }
 

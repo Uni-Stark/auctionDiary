@@ -14,8 +14,8 @@ public class ActivityMainBindingImpl extends ActivityMainBinding  {
     static {
         sIncludes = null;
         sViewsWithIds = new android.util.SparseIntArray();
-        sViewsWithIds.put(R.id.mainTabContainer, 1);
-        sViewsWithIds.put(R.id.mainViewPager, 2);
+        sViewsWithIds.put(R.id.mainViewPager, 1);
+        sViewsWithIds.put(R.id.mainTabContainer, 2);
     }
     // views
     @NonNull
@@ -30,8 +30,8 @@ public class ActivityMainBindingImpl extends ActivityMainBinding  {
     }
     private ActivityMainBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 0
-            , (com.google.android.material.tabs.TabLayout) bindings[1]
-            , (androidx.viewpager2.widget.ViewPager2) bindings[2]
+            , (com.google.android.material.tabs.TabLayout) bindings[2]
+            , (androidx.viewpager2.widget.ViewPager2) bindings[1]
             );
         this.mboundView0 = (androidx.constraintlayout.widget.ConstraintLayout) bindings[0];
         this.mboundView0.setTag(null);
