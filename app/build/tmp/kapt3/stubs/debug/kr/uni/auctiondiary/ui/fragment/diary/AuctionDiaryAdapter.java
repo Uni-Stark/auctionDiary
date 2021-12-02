@@ -5,9 +5,6 @@ import android.view.ViewGroup;
 import androidx.recyclerview.widget.DiffUtil;
 import androidx.recyclerview.widget.ListAdapter;
 import androidx.recyclerview.widget.RecyclerView;
-import com.bumptech.glide.Glide;
-import com.bumptech.glide.request.RequestOptions;
-import kr.uni.auctiondiary.R;
 import kr.uni.auctiondiary.databinding.ListAuctionNoteBinding;
 import kr.uni.auctiondiary.util.database.entity.AuctionNoteEntity;
 

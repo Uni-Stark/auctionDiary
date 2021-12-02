@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\kgo07\\Desktop\\auctionDiary\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-af\\values-af.xml",
+            "outputFile": "C:\\Users\\kgo07\\Desktop\\auctiondiary\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-af\\values-af.xml",
             "map": [
                 {
                     "source": "C:\\Users\\kgo07\\.gradle\\caches\\transforms-3\\445784ac4940f9faa639a7ea03fa85af\\transformed\\jetified-play-services-base-17.0.0\\res\\values-af\\values.xml",

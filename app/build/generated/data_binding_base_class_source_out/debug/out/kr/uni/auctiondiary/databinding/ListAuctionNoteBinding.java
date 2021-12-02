@@ -4,9 +4,10 @@ package kr.uni.auctiondiary.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.appcompat.widget.AppCompatImageView;
 import androidx.appcompat.widget.AppCompatTextView;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.viewbinding.ViewBinding;
@@ -21,22 +22,49 @@ public final class ListAuctionNoteBinding implements ViewBinding {
   private final ConstraintLayout rootView;
 
   @NonNull
-  public final AppCompatImageView auctionNoteListImage;
+  public final TextView auctionNoteListDetailLocation;
 
   @NonNull
-  public final AppCompatTextView auctionNoteListLocation;
+  public final ImageView auctionNoteListIcon;
+
+  @NonNull
+  public final AppCompatTextView auctionNoteListSimpleLocation;
+
+  @NonNull
+  public final ConstraintLayout auctionNoteListSpecification;
 
   @NonNull
   public final AppCompatTextView auctionNoteListTag;
 
+  @NonNull
+  public final TextView auctionSpecificationApt;
+
+  @NonNull
+  public final TextView auctionSpecificationLand;
+
+  @NonNull
+  public final TextView auctionSpecificationOffice;
+
+  @NonNull
+  public final TextView auctionSpecificationStore;
+
   private ListAuctionNoteBinding(@NonNull ConstraintLayout rootView,
-      @NonNull AppCompatImageView auctionNoteListImage,
-      @NonNull AppCompatTextView auctionNoteListLocation,
-      @NonNull AppCompatTextView auctionNoteListTag) {
+      @NonNull TextView auctionNoteListDetailLocation, @NonNull ImageView auctionNoteListIcon,
+      @NonNull AppCompatTextView auctionNoteListSimpleLocation,
+      @NonNull ConstraintLayout auctionNoteListSpecification,
+      @NonNull AppCompatTextView auctionNoteListTag, @NonNull TextView auctionSpecificationApt,
+      @NonNull TextView auctionSpecificationLand, @NonNull TextView auctionSpecificationOffice,
+      @NonNull TextView auctionSpecificationStore) {
     this.rootView = rootView;
-    this.auctionNoteListImage = auctionNoteListImage;
-    this.auctionNoteListLocation = auctionNoteListLocation;
+    this.auctionNoteListDetailLocation = auctionNoteListDetailLocation;
+    this.auctionNoteListIcon = auctionNoteListIcon;
+    this.auctionNoteListSimpleLocation = auctionNoteListSimpleLocation;
+    this.auctionNoteListSpecification = auctionNoteListSpecification;
     this.auctionNoteListTag = auctionNoteListTag;
+    this.auctionSpecificationApt = auctionSpecificationApt;
+    this.auctionSpecificationLand = auctionSpecificationLand;
+    this.auctionSpecificationOffice = auctionSpecificationOffice;
+    this.auctionSpecificationStore = auctionSpecificationStore;
   }
 
   @Override
@@ -66,15 +94,27 @@ public final class ListAuctionNoteBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.auctionNoteListImage;
-      AppCompatImageView auctionNoteListImage = ViewBindings.findChildViewById(rootView, id);
-      if (auctionNoteListImage == null) {
+      id = R.id.auctionNoteListDetailLocation;
+      TextView auctionNoteListDetailLocation = ViewBindings.findChildViewById(rootView, id);
+      if (auctionNoteListDetailLocation == null) {
         break missingId;
       }
 
-      id = R.id.auctionNoteListLocation;
-      AppCompatTextView auctionNoteListLocation = ViewBindings.findChildViewById(rootView, id);
-      if (auctionNoteListLocation == null) {
+      id = R.id.auctionNoteListIcon;
+      ImageView auctionNoteListIcon = ViewBindings.findChildViewById(rootView, id);
+      if (auctionNoteListIcon == null) {
+        break missingId;
+      }
+
+      id = R.id.auctionNoteListSimpleLocation;
+      AppCompatTextView auctionNoteListSimpleLocation = ViewBindings.findChildViewById(rootView, id);
+      if (auctionNoteListSimpleLocation == null) {
+        break missingId;
+      }
+
+      id = R.id.auctionNoteListSpecification;
+      ConstraintLayout auctionNoteListSpecification = ViewBindings.findChildViewById(rootView, id);
+      if (auctionNoteListSpecification == null) {
         break missingId;
       }
 
@@ -84,8 +124,34 @@ public final class ListAuctionNoteBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ListAuctionNoteBinding((ConstraintLayout) rootView, auctionNoteListImage,
-          auctionNoteListLocation, auctionNoteListTag);
+      id = R.id.auctionSpecificationApt;
+      TextView auctionSpecificationApt = ViewBindings.findChildViewById(rootView, id);
+      if (auctionSpecificationApt == null) {
+        break missingId;
+      }
+
+      id = R.id.auctionSpecificationLand;
+      TextView auctionSpecificationLand = ViewBindings.findChildViewById(rootView, id);
+      if (auctionSpecificationLand == null) {
+        break missingId;
+      }
+
+      id = R.id.auctionSpecificationOffice;
+      TextView auctionSpecificationOffice = ViewBindings.findChildViewById(rootView, id);
+      if (auctionSpecificationOffice == null) {
+        break missingId;
+      }
+
+      id = R.id.auctionSpecificationStore;
+      TextView auctionSpecificationStore = ViewBindings.findChildViewById(rootView, id);
+      if (auctionSpecificationStore == null) {
+        break missingId;
+      }
+
+      return new ListAuctionNoteBinding((ConstraintLayout) rootView, auctionNoteListDetailLocation,
+          auctionNoteListIcon, auctionNoteListSimpleLocation, auctionNoteListSpecification,
+          auctionNoteListTag, auctionSpecificationApt, auctionSpecificationLand,
+          auctionSpecificationOffice, auctionSpecificationStore);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

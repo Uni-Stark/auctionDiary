@@ -14,11 +14,13 @@ public class FragmentAuctionDiaryBindingImpl extends FragmentAuctionDiaryBinding
     static {
         sIncludes = null;
         sViewsWithIds = new android.util.SparseIntArray();
-        sViewsWithIds.put(R.id.list, 1);
-        sViewsWithIds.put(R.id.noAuctionListContainer, 2);
-        sViewsWithIds.put(R.id.noDiaryText, 3);
-        sViewsWithIds.put(R.id.noDiaryButton, 4);
-        sViewsWithIds.put(R.id.floatingButton, 5);
+        sViewsWithIds.put(R.id.addAuctionNote, 1);
+        sViewsWithIds.put(R.id.addListImage, 2);
+        sViewsWithIds.put(R.id.addList, 3);
+        sViewsWithIds.put(R.id.list, 4);
+        sViewsWithIds.put(R.id.noAuctionListContainer, 5);
+        sViewsWithIds.put(R.id.noDiaryText, 6);
+        sViewsWithIds.put(R.id.noDiaryButton, 7);
     }
     // views
     // variables
@@ -27,16 +29,18 @@ public class FragmentAuctionDiaryBindingImpl extends FragmentAuctionDiaryBinding
     // Inverse Binding Event Handlers
 
     public FragmentAuctionDiaryBindingImpl(@Nullable androidx.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
-        this(bindingComponent, root, mapBindings(bindingComponent, root, 6, sIncludes, sViewsWithIds));
+        this(bindingComponent, root, mapBindings(bindingComponent, root, 8, sIncludes, sViewsWithIds));
     }
     private FragmentAuctionDiaryBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 0
-            , (com.google.android.material.floatingactionbutton.FloatingActionButton) bindings[5]
-            , (androidx.recyclerview.widget.RecyclerView) bindings[1]
+            , (androidx.constraintlayout.widget.ConstraintLayout) bindings[1]
+            , (android.widget.TextView) bindings[3]
+            , (android.widget.ImageView) bindings[2]
+            , (androidx.recyclerview.widget.RecyclerView) bindings[4]
             , (androidx.constraintlayout.widget.ConstraintLayout) bindings[0]
-            , (androidx.constraintlayout.widget.ConstraintLayout) bindings[2]
-            , (android.widget.Button) bindings[4]
-            , (androidx.appcompat.widget.AppCompatTextView) bindings[3]
+            , (androidx.constraintlayout.widget.ConstraintLayout) bindings[5]
+            , (android.widget.Button) bindings[7]
+            , (androidx.appcompat.widget.AppCompatTextView) bindings[6]
             );
         this.mainContainer.setTag(null);
         setRootTag(root);

@@ -9,6 +9,7 @@ import androidx.room.PrimaryKey
 data class AuctionNoteEntity(
     @PrimaryKey(autoGenerate = true) @ColumnInfo(name = "NOTE_IDX") var idx: Int,
     @ColumnInfo(name = "PICTURE_PATH") var picturePath: String = "",
-    @ColumnInfo(name = "PLACE") var place: String = "",
+    @ColumnInfo(name = "SIMPLE_PLACE") var simplePlace: String = "",
+    @ColumnInfo(name = "DETAIL_PLACE") var detailPlcae: String = "",
     @ColumnInfo(name = "TAG") var tag: String = ""
 )

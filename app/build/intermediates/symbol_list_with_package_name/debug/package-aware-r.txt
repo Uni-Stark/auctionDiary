@@ -1181,6 +1181,8 @@ color cardview_light_background
 color cardview_shadow_end_color
 color cardview_shadow_start_color
 color checkbox_themeable_attribute_color
+color colorBackground
+color colorDarkBlue
 color colorFriendListMyProfile
 color colorMainBlack
 color colorMainBlue
@@ -1190,7 +1192,6 @@ color colorMainLightGrey
 color colorMainMint
 color colorMainRed
 color colorMainTextColor
-color colorSkyblue
 color colorSplashBackground
 color colorSplashText
 color colorUnderline
@@ -1251,6 +1252,7 @@ color error_color_material_dark
 color error_color_material_light
 color foreground_material_dark
 color foreground_material_light
+color grey_800
 color highlighted_text_material_dark
 color highlighted_text_material_light
 color material_blue_grey_800
@@ -1913,6 +1915,8 @@ drawable fingerprint_dialog_error
 drawable fingerprint_dialog_fp_icon
 drawable googleg_disabled_color_18
 drawable googleg_standard_color_18
+drawable ic_add_round
+drawable ic_back_arrow
 drawable ic_clock_black_24dp
 drawable ic_keyboard_black_24dp
 drawable ic_launcher_background
@@ -1955,6 +1959,7 @@ drawable notification_template_icon_bg
 drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
+drawable style_button
 drawable style_round
 drawable test_custom_background
 drawable test_level_drawable
@@ -2032,6 +2037,9 @@ id action_text
 id actions
 id activity_chooser_view_content
 id add
+id addAuctionNote
+id addList
+id addListImage
 id adjust_height
 id adjust_width
 id alertTitle
@@ -2046,9 +2054,15 @@ id anticipate
 id arc
 id asConfigured
 id async
-id auctionNoteListImage
-id auctionNoteListLocation
+id auctionNoteListDetailLocation
+id auctionNoteListIcon
+id auctionNoteListSimpleLocation
+id auctionNoteListSpecification
 id auctionNoteListTag
+id auctionSpecificationApt
+id auctionSpecificationLand
+id auctionSpecificationOffice
+id auctionSpecificationStore
 id auto
 id autoComplete
 id autoCompleteToEnd
@@ -2161,7 +2175,6 @@ id fitToContents
 id fixed
 id flip
 id floating
-id floatingButton
 id forever
 id fragment_container_view_tag
 id frost
@@ -2335,6 +2348,7 @@ id right_side
 id rounded
 id row_index_key
 id satellite
+id saveNoteButton
 id save_non_transition_alpha
 id save_overlay_view
 id sawtooth
@@ -2377,6 +2391,11 @@ id software
 id south
 id spacer
 id special_effects_controller_view_tag
+id specificationApt
+id specificationContainer
+id specificationLand
+id specificationOffice
+id specificationStore
 id spline
 id split_action_bar
 id spread
@@ -2559,6 +2578,7 @@ layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
+layout empty_auction_note
 layout fingerprint_dialog_layout
 layout fragment_auction
 layout fragment_auction_diary

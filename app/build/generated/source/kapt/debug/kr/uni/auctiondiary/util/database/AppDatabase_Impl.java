@@ -35,9 +35,9 @@ public final class AppDatabase_Impl extends AppDatabase {
     final SupportSQLiteOpenHelper.Callback _openCallback = new RoomOpenHelper(configuration, new RoomOpenHelper.Delegate(1) {
       @Override
       public void createAllTables(SupportSQLiteDatabase _db) {
-        _db.execSQL("CREATE TABLE IF NOT EXISTS `AUCTION_NOTE` (`NOTE_IDX` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `PICTURE_PATH` TEXT NOT NULL, `PLACE` TEXT NOT NULL, `TAG` TEXT NOT NULL)");
+        _db.execSQL("CREATE TABLE IF NOT EXISTS `AUCTION_NOTE` (`NOTE_IDX` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `PICTURE_PATH` TEXT NOT NULL, `SIMPLE_PLACE` TEXT NOT NULL, `DETAIL_PLACE` TEXT NOT NULL, `TAG` TEXT NOT NULL)");
         _db.execSQL("CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)");
-        _db.execSQL("INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '1d9e3087b629d964f644fc89ada81743')");
+        _db.execSQL("INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '2a7e5534106d8b1b9999b144fe7c44ef')");
       }
 
       @Override
@@ -81,10 +81,11 @@ public final class AppDatabase_Impl extends AppDatabase {
 
       @Override
       protected RoomOpenHelper.ValidationResult onValidateSchema(SupportSQLiteDatabase _db) {
-        final HashMap<String, TableInfo.Column> _columnsAUCTIONNOTE = new HashMap<String, TableInfo.Column>(4);
+        final HashMap<String, TableInfo.Column> _columnsAUCTIONNOTE = new HashMap<String, TableInfo.Column>(5);
         _columnsAUCTIONNOTE.put("NOTE_IDX", new TableInfo.Column("NOTE_IDX", "INTEGER", true, 1, null, TableInfo.CREATED_FROM_ENTITY));
         _columnsAUCTIONNOTE.put("PICTURE_PATH", new TableInfo.Column("PICTURE_PATH", "TEXT", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
-        _columnsAUCTIONNOTE.put("PLACE", new TableInfo.Column("PLACE", "TEXT", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsAUCTIONNOTE.put("SIMPLE_PLACE", new TableInfo.Column("SIMPLE_PLACE", "TEXT", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsAUCTIONNOTE.put("DETAIL_PLACE", new TableInfo.Column("DETAIL_PLACE", "TEXT", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
         _columnsAUCTIONNOTE.put("TAG", new TableInfo.Column("TAG", "TEXT", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
         final HashSet<TableInfo.ForeignKey> _foreignKeysAUCTIONNOTE = new HashSet<TableInfo.ForeignKey>(0);
         final HashSet<TableInfo.Index> _indicesAUCTIONNOTE = new HashSet<TableInfo.Index>(0);
@@ -97,7 +98,7 @@ public final class AppDatabase_Impl extends AppDatabase {
         }
         return new RoomOpenHelper.ValidationResult(true, null);
       }
-    }, "1d9e3087b629d964f644fc89ada81743", "cf542deebd936cd1193d932fae6ada11");
+    }, "2a7e5534106d8b1b9999b144fe7c44ef", "1f6aa0473049807b23ded7968d605f51");
     final SupportSQLiteOpenHelper.Configuration _sqliteConfig = SupportSQLiteOpenHelper.Configuration.builder(configuration.context)
         .name(configuration.name)
         .callback(_openCallback)

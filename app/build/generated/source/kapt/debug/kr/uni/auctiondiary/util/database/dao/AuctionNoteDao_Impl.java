@@ -36,7 +36,7 @@ public final class AuctionNoteDao_Impl implements AuctionNoteDao {
     this.__insertionAdapterOfAuctionNoteEntity = new EntityInsertionAdapter<AuctionNoteEntity>(__db) {
       @Override
       public String createQuery() {
-        return "INSERT OR REPLACE INTO `AUCTION_NOTE` (`NOTE_IDX`,`PICTURE_PATH`,`PLACE`,`TAG`) VALUES (nullif(?, 0),?,?,?)";
+        return "INSERT OR REPLACE INTO `AUCTION_NOTE` (`NOTE_IDX`,`PICTURE_PATH`,`SIMPLE_PLACE`,`DETAIL_PLACE`,`TAG`) VALUES (nullif(?, 0),?,?,?,?)";
       }
 
       @Override
@@ -47,15 +47,20 @@ public final class AuctionNoteDao_Impl implements AuctionNoteDao {
         } else {
           stmt.bindString(2, value.getPicturePath());
         }
-        if (value.getPlace() == null) {
+        if (value.getSimplePlace() == null) {
           stmt.bindNull(3);
         } else {
-          stmt.bindString(3, value.getPlace());
+          stmt.bindString(3, value.getSimplePlace());
         }
-        if (value.getTag() == null) {
+        if (value.getDetailPlcae() == null) {
           stmt.bindNull(4);
         } else {
-          stmt.bindString(4, value.getTag());
+          stmt.bindString(4, value.getDetailPlcae());
+        }
+        if (value.getTag() == null) {
+          stmt.bindNull(5);
+        } else {
+          stmt.bindString(5, value.getTag());
         }
       }
     };
@@ -128,7 +133,8 @@ public final class AuctionNoteDao_Impl implements AuctionNoteDao {
         try {
           final int _cursorIndexOfIdx = CursorUtil.getColumnIndexOrThrow(_cursor, "NOTE_IDX");
           final int _cursorIndexOfPicturePath = CursorUtil.getColumnIndexOrThrow(_cursor, "PICTURE_PATH");
-          final int _cursorIndexOfPlace = CursorUtil.getColumnIndexOrThrow(_cursor, "PLACE");
+          final int _cursorIndexOfSimplePlace = CursorUtil.getColumnIndexOrThrow(_cursor, "SIMPLE_PLACE");
+          final int _cursorIndexOfDetailPlcae = CursorUtil.getColumnIndexOrThrow(_cursor, "DETAIL_PLACE");
           final int _cursorIndexOfTag = CursorUtil.getColumnIndexOrThrow(_cursor, "TAG");
           final List<AuctionNoteEntity> _result = new ArrayList<AuctionNoteEntity>(_cursor.getCount());
           while(_cursor.moveToNext()) {
@@ -141,11 +147,17 @@ public final class AuctionNoteDao_Impl implements AuctionNoteDao {
             } else {
               _tmpPicturePath = _cursor.getString(_cursorIndexOfPicturePath);
             }
-            final String _tmpPlace;
-            if (_cursor.isNull(_cursorIndexOfPlace)) {
-              _tmpPlace = null;
+            final String _tmpSimplePlace;
+            if (_cursor.isNull(_cursorIndexOfSimplePlace)) {
+              _tmpSimplePlace = null;
             } else {
-              _tmpPlace = _cursor.getString(_cursorIndexOfPlace);
+              _tmpSimplePlace = _cursor.getString(_cursorIndexOfSimplePlace);
+            }
+            final String _tmpDetailPlcae;
+            if (_cursor.isNull(_cursorIndexOfDetailPlcae)) {
+              _tmpDetailPlcae = null;
+            } else {
+              _tmpDetailPlcae = _cursor.getString(_cursorIndexOfDetailPlcae);
             }
             final String _tmpTag;
             if (_cursor.isNull(_cursorIndexOfTag)) {
@@ -153,7 +165,7 @@ public final class AuctionNoteDao_Impl implements AuctionNoteDao {
             } else {
               _tmpTag = _cursor.getString(_cursorIndexOfTag);
             }
-            _item = new AuctionNoteEntity(_tmpIdx,_tmpPicturePath,_tmpPlace,_tmpTag);
+            _item = new AuctionNoteEntity(_tmpIdx,_tmpPicturePath,_tmpSimplePlace,_tmpDetailPlcae,_tmpTag);
             _result.add(_item);
           }
           return _result;

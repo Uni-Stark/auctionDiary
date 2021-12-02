@@ -5,6 +5,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.widget.AppCompatTextView;
@@ -13,7 +15,6 @@ import androidx.databinding.Bindable;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
 import androidx.recyclerview.widget.RecyclerView;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import java.lang.Deprecated;
 import java.lang.Object;
 import kr.uni.auctiondiary.R;
@@ -21,7 +22,13 @@ import kr.uni.auctiondiary.ui.fragment.diary.FragmentAuctionDiary;
 
 public abstract class FragmentAuctionDiaryBinding extends ViewDataBinding {
   @NonNull
-  public final FloatingActionButton floatingButton;
+  public final ConstraintLayout addAuctionNote;
+
+  @NonNull
+  public final TextView addList;
+
+  @NonNull
+  public final ImageView addListImage;
 
   @NonNull
   public final RecyclerView list;
@@ -42,11 +49,13 @@ public abstract class FragmentAuctionDiaryBinding extends ViewDataBinding {
   protected FragmentAuctionDiary mFm;
 
   protected FragmentAuctionDiaryBinding(Object _bindingComponent, View _root, int _localFieldCount,
-      FloatingActionButton floatingButton, RecyclerView list, ConstraintLayout mainContainer,
-      ConstraintLayout noAuctionListContainer, Button noDiaryButton,
+      ConstraintLayout addAuctionNote, TextView addList, ImageView addListImage, RecyclerView list,
+      ConstraintLayout mainContainer, ConstraintLayout noAuctionListContainer, Button noDiaryButton,
       AppCompatTextView noDiaryText) {
     super(_bindingComponent, _root, _localFieldCount);
-    this.floatingButton = floatingButton;
+    this.addAuctionNote = addAuctionNote;
+    this.addList = addList;
+    this.addListImage = addListImage;
     this.list = list;
     this.mainContainer = mainContainer;
     this.noAuctionListContainer = noAuctionListContainer;

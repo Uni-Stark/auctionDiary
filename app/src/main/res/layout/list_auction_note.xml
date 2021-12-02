@@ -8,37 +8,106 @@
     android:elevation="10dp"
     android:padding="20dp">
 
-    <androidx.appcompat.widget.AppCompatImageView
-        android:id="@+id/auctionNoteListImage"
-        android:layout_width="64dp"
-        android:layout_height="64dp"
-        android:layout_marginStart="20dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+
+    <ImageView
+        android:id="@+id/auctionNoteListIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_location"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-
     <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/auctionNoteListLocation"
+        android:id="@+id/auctionNoteListSimpleLocation"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:ellipsize="end"
+        android:textSize="17sp"
         android:gravity="center_vertical"
+        android:maxLines="1"
         android:paddingStart="10dp"
-        android:text="위치표시"
-        app:layout_constraintBottom_toTopOf="@id/auctionNoteListTag"
+        android:textColor="@color/grey_800"
+        android:text="간략한 주소"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/auctionNoteListIcon"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/auctionNoteListImage"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toEndOf="@id/auctionNoteListIcon"
+        app:layout_constraintTop_toTopOf="@id/auctionNoteListIcon" />
+
+    <TextView
+        android:id="@+id/auctionNoteListDetailLocation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="디테일한 주소"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/auctionNoteListSimpleLocation" />
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/auctionNoteListTag"
         android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:ellipsize="end"
         android:gravity="center_vertical"
-        android:paddingStart="10dp"
+        android:maxLines="1"
         android:text="태그 표시"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/auctionNoteListDetailLocation" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/auctionNoteListSpecification"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/auctionNoteListTag">
+
+        <TextView
+            android:id="@+id/auctionSpecificationApt"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/auctionSpecificationOffice"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/auctionSpecificationOffice"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/auctionSpecificationStore"
+            app:layout_constraintStart_toEndOf="@id/auctionSpecificationApt"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/auctionSpecificationStore"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/auctionSpecificationLand"
+            app:layout_constraintStart_toEndOf="@id/auctionSpecificationOffice"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/auctionSpecificationLand"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/auctionSpecificationStore"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="0dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/auctionNoteListImage"
-        app:layout_constraintTop_toBottomOf="@id/auctionNoteListLocation" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/auctionNoteListSpecification" />
 </androidx.constraintlayout.widget.ConstraintLayout>
