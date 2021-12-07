@@ -15,10 +15,11 @@ import kr.uni.auctiondiary.util.database.repo.AuctionNoteRepo
 import javax.inject.Inject
 
 @HiltViewModel
-class AuctionDiaryViewModel @Inject constructor(@ApplicationContext context: Context) :
-    ViewModel() {
+class AuctionDiaryViewModel @Inject constructor
+    (@ApplicationContext context: Context) : ViewModel() {
     @OptIn(InternalCoroutinesApi::class)
     private val database = AuctionNoteRepo(context)
+
 
 
     /**

@@ -19,9 +19,9 @@ import kr.uni.auctiondiary.util.database.repo.AuctionNoteRepo
 import java.util.*
 import javax.inject.Inject
 
+@InternalCoroutinesApi
 
 @AndroidEntryPoint
-@InternalCoroutinesApi
 class FragmentAuctionDiary : Fragment() {
     private val viewModel: AuctionDiaryViewModel by viewModels()
     lateinit var binding: FragmentAuctionDiaryBinding
@@ -74,29 +74,13 @@ class FragmentAuctionDiary : Fragment() {
                     // Data Null Check 후 없다면 없다는 표시 내보내기
                     // 현재는 isNotEmpty를 사용하여 Empty가 아니면 데이터를 세팅해줌
                     // else에다가 데이터가 없으면 아무것도 없다는 표시를 내보내주게 하기
-//                    if (data.isNotEmpty()) {
                         adapter.submitList(data)
-//                        listSetOnMainThread(SHOW_LIST)
-//                    } else {
-//                        listSetOnMainThread(SHOW_EMPTY_LIST)
-//                    }
                 }
             }
         }
     }
 
-    private fun listSetOnMainThread(state: Int) {
-        when (state) {
-            SHOW_LIST -> {
-                binding.list.visibility = View.VISIBLE
-                binding.noAuctionListContainer.visibility = View.GONE
-            }
-            SHOW_EMPTY_LIST -> {
-                binding.list.visibility = View.GONE
-                binding.noAuctionListContainer.visibility = View.VISIBLE
-            }
-        }
-    }
+
 
     companion object {
         private const val SHOW_LIST = 1001

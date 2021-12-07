@@ -1,10 +1,9 @@
-kr/uni/auctiondiary/ui/main/Hilt_MainActivity.java
- kr.uni.auctiondiary.ui.main.Hilt_MainActivity
- kr.uni.auctiondiary.ui.main.Hilt_MainActivity$1
+kr/uni/auctiondiary/databinding/ListAuctionNoteBinding.java
+ kr.uni.auctiondiary.databinding.ListAuctionNoteBinding
 hilt_aggregated_deps/_androidx_hilt_lifecycle_ViewModelFactoryModules_ActivityModuleModuleDeps.java
  hilt_aggregated_deps._androidx_hilt_lifecycle_ViewModelFactoryModules_ActivityModuleModuleDeps
-hilt_aggregated_deps/_kr_uni_auctiondiary_ui_activity_WriteAuctionActivity_GeneratedInjector.java
- hilt_aggregated_deps._kr_uni_auctiondiary_ui_activity_WriteAuctionActivity_GeneratedInjector
+hilt_aggregated_deps/_kr_uni_auctiondiary_ui_main_MainActivity_GeneratedInjector.java
+ hilt_aggregated_deps._kr_uni_auctiondiary_ui_main_MainActivity_GeneratedInjector
 hilt_aggregated_deps/_kr_uni_auctiondiary_ui_fragment_diary_AuctionDiaryViewModel_HiltModules_BindsModule.java
  hilt_aggregated_deps._kr_uni_auctiondiary_ui_fragment_diary_AuctionDiaryViewModel_HiltModules_BindsModule
 androidx/databinding/DataBinderMapperImpl.java
@@ -15,26 +14,27 @@ androidx/databinding/library/baseAdapters/BR.java
  androidx.databinding.library.baseAdapters.BR
 kr/uni/auctiondiary/DataBindingTriggerClass.java
  kr.uni.auctiondiary.DataBindingTriggerClass
-kr/uni/auctiondiary/ui/fragment/diary/AuctionDiaryViewModel_Factory.java
- kr.uni.auctiondiary.ui.fragment.diary.AuctionDiaryViewModel_Factory
-kr/uni/auctiondiary/ui/activity/WriteAuctionActivity_GeneratedInjector.java
- kr.uni.auctiondiary.ui.activity.WriteAuctionActivity_GeneratedInjector
+kr/uni/auctiondiary/databinding/FragmentSettingBinding.java
+ kr.uni.auctiondiary.databinding.FragmentSettingBinding
+kr/uni/auctiondiary/ui/fragment/diary/AuctionDiaryViewModel_HiltModules.java
+ kr.uni.auctiondiary.ui.fragment.diary.AuctionDiaryViewModel_HiltModules
+ kr.uni.auctiondiary.ui.fragment.diary.AuctionDiaryViewModel_HiltModules$BindsModule
+ kr.uni.auctiondiary.ui.fragment.diary.AuctionDiaryViewModel_HiltModules$KeyModule
 kr/uni/auctiondiary/ui/main/MainViewModel_Factory.java
  kr.uni.auctiondiary.ui.main.MainViewModel_Factory
 kr/uni/auctiondiary/databinding/FragmentSettingBindingImpl.java
  kr.uni.auctiondiary.databinding.FragmentSettingBindingImpl
-kr/uni/auctiondiary/ui/fragment/diary/Hilt_FragmentAuctionDiary.java
- kr.uni.auctiondiary.ui.fragment.diary.Hilt_FragmentAuctionDiary
-kr/uni/auctiondiary/ui/activity/WriteAuctionViewModel_Factory.java
- kr.uni.auctiondiary.ui.activity.WriteAuctionViewModel_Factory
- kr.uni.auctiondiary.ui.activity.WriteAuctionViewModel_Factory$InstanceHolder
-kr/uni/auctiondiary/util/UniApp_ComponentTreeDeps.java
- kr.uni.auctiondiary.util.UniApp_ComponentTreeDeps
+kr/uni/auctiondiary/generated/callback/OnClickListener.java
+ kr.uni.auctiondiary.generated.callback.OnClickListener
+ kr.uni.auctiondiary.generated.callback.OnClickListener$Listener
+dagger/hilt/internal/aggregatedroot/codegen/_kr_uni_auctiondiary_util_UniApp.java
+ dagger.hilt.internal.aggregatedroot.codegen._kr_uni_auctiondiary_util_UniApp
+hilt_aggregated_deps/_kr_uni_auctiondiary_ui_activity_WriteAuctionActivity_GeneratedInjector.java
+ hilt_aggregated_deps._kr_uni_auctiondiary_ui_activity_WriteAuctionActivity_GeneratedInjector
 dagger/hilt/internal/processedrootsentinel/codegen/_kr_uni_auctiondiary_util_UniApp.java
  dagger.hilt.internal.processedrootsentinel.codegen._kr_uni_auctiondiary_util_UniApp
-kr/uni/auctiondiary/util/Hilt_UniApp.java
- kr.uni.auctiondiary.util.Hilt_UniApp
- kr.uni.auctiondiary.util.Hilt_UniApp$1
+kr/uni/auctiondiary/ui/fragment/diary/AuctionDiaryViewModel_Factory.java
+ kr.uni.auctiondiary.ui.fragment.diary.AuctionDiaryViewModel_Factory
 kr/uni/auctiondiary/BuildConfig.java
  kr.uni.auctiondiary.BuildConfig
 kr/uni/auctiondiary/databinding/FragmentBoardBindingImpl.java
@@ -43,30 +43,53 @@ androidx/databinding/DataBindingComponent.java
  androidx.databinding.DataBindingComponent
 hilt_aggregated_deps/_kr_uni_auctiondiary_ui_fragment_diary_FragmentAuctionDiary_GeneratedInjector.java
  hilt_aggregated_deps._kr_uni_auctiondiary_ui_fragment_diary_FragmentAuctionDiary_GeneratedInjector
-hilt_aggregated_deps/_kr_uni_auctiondiary_ui_main_MainActivity_GeneratedInjector.java
- hilt_aggregated_deps._kr_uni_auctiondiary_ui_main_MainActivity_GeneratedInjector
+kr/uni/auctiondiary/BR.java
+ kr.uni.auctiondiary.BR
 hilt_aggregated_deps/_kr_uni_auctiondiary_ui_activity_WriteAuctionViewModel_HiltModules_KeyModule.java
  hilt_aggregated_deps._kr_uni_auctiondiary_ui_activity_WriteAuctionViewModel_HiltModules_KeyModule
 kr/uni/auctiondiary/util/UniApp_GeneratedInjector.java
  kr.uni.auctiondiary.util.UniApp_GeneratedInjector
-kr/uni/auctiondiary/ui/fragment/diary/FragmentAuctionDiary_GeneratedInjector.java
- kr.uni.auctiondiary.ui.fragment.diary.FragmentAuctionDiary_GeneratedInjector
+kr/uni/auctiondiary/DataBinderMapperImpl.java
+ kr.uni.auctiondiary.DataBinderMapperImpl
+ kr.uni.auctiondiary.DataBinderMapperImpl$InnerBrLookup
+ kr.uni.auctiondiary.DataBinderMapperImpl$InnerLayoutIdLookup
 hilt_aggregated_deps/_kr_uni_auctiondiary_util_UniApp_GeneratedInjector.java
  hilt_aggregated_deps._kr_uni_auctiondiary_util_UniApp_GeneratedInjector
-kr/uni/auctiondiary/ui/main/MainActivity_GeneratedInjector.java
- kr.uni.auctiondiary.ui.main.MainActivity_GeneratedInjector
+kr/uni/auctiondiary/util/database/AppDatabase_Impl.java
+ kr.uni.auctiondiary.util.database.AppDatabase_Impl
+ kr.uni.auctiondiary.util.database.AppDatabase_Impl$1
 kr/uni/auctiondiary/ui/activity/WriteAuctionViewModel_HiltModules_KeyModule_ProvideFactory.java
  kr.uni.auctiondiary.ui.activity.WriteAuctionViewModel_HiltModules_KeyModule_ProvideFactory
  kr.uni.auctiondiary.ui.activity.WriteAuctionViewModel_HiltModules_KeyModule_ProvideFactory$InstanceHolder
-kr/uni/auctiondiary/ui/activity/Hilt_WriteAuctionActivity.java
- kr.uni.auctiondiary.ui.activity.Hilt_WriteAuctionActivity
- kr.uni.auctiondiary.ui.activity.Hilt_WriteAuctionActivity$1
+kr/uni/auctiondiary/databinding/EmptyAuctionNoteBinding.java
+ kr.uni.auctiondiary.databinding.EmptyAuctionNoteBinding
 hilt_aggregated_deps/_kr_uni_auctiondiary_ui_activity_WriteAuctionViewModel_HiltModules_BindsModule.java
  hilt_aggregated_deps._kr_uni_auctiondiary_ui_activity_WriteAuctionViewModel_HiltModules_BindsModule
-kr/uni/auctiondiary/ui/main/MainActivity_MembersInjector.java
- kr.uni.auctiondiary.ui.main.MainActivity_MembersInjector
-dagger/hilt/internal/aggregatedroot/codegen/_kr_uni_auctiondiary_util_UniApp.java
- dagger.hilt.internal.aggregatedroot.codegen._kr_uni_auctiondiary_util_UniApp
+kr/uni/auctiondiary/util/Hilt_UniApp.java
+ kr.uni.auctiondiary.util.Hilt_UniApp
+ kr.uni.auctiondiary.util.Hilt_UniApp$1
+kr/uni/auctiondiary/util/database/dao/AuctionNoteDao_Impl.java
+ kr.uni.auctiondiary.util.database.dao.AuctionNoteDao_Impl
+ kr.uni.auctiondiary.util.database.dao.AuctionNoteDao_Impl$1
+ kr.uni.auctiondiary.util.database.dao.AuctionNoteDao_Impl$2
+ kr.uni.auctiondiary.util.database.dao.AuctionNoteDao_Impl$3
+ kr.uni.auctiondiary.util.database.dao.AuctionNoteDao_Impl$4
+kr/uni/auctiondiary/databinding/FragmentBoardBinding.java
+ kr.uni.auctiondiary.databinding.FragmentBoardBinding
+hilt_aggregated_deps/_kr_uni_auctiondiary_ui_fragment_diary_AuctionDiaryViewModel_HiltModules_KeyModule.java
+ hilt_aggregated_deps._kr_uni_auctiondiary_ui_fragment_diary_AuctionDiaryViewModel_HiltModules_KeyModule
+hilt_aggregated_deps/_androidx_hilt_lifecycle_ViewModelFactoryModules_FragmentModuleModuleDeps.java
+ hilt_aggregated_deps._androidx_hilt_lifecycle_ViewModelFactoryModules_FragmentModuleModuleDeps
+kr/uni/auctiondiary/ui/fragment/diary/AuctionDiaryViewModel_HiltModules_KeyModule_ProvideFactory.java
+ kr.uni.auctiondiary.ui.fragment.diary.AuctionDiaryViewModel_HiltModules_KeyModule_ProvideFactory
+ kr.uni.auctiondiary.ui.fragment.diary.AuctionDiaryViewModel_HiltModules_KeyModule_ProvideFactory$InstanceHolder
+kr/uni/auctiondiary/databinding/FragmentAuctionBinding.java
+ kr.uni.auctiondiary.databinding.FragmentAuctionBinding
+kr/uni/auctiondiary/databinding/ActivityMainBindingImpl.java
+ kr.uni.auctiondiary.databinding.ActivityMainBindingImpl
+kr/uni/auctiondiary/ui/activity/WriteAuctionViewModel_Factory.java
+ kr.uni.auctiondiary.ui.activity.WriteAuctionViewModel_Factory
+ kr.uni.auctiondiary.ui.activity.WriteAuctionViewModel_Factory$InstanceHolder
 kr/uni/auctiondiary/util/UniApp_HiltComponents.java
  kr.uni.auctiondiary.util.UniApp_HiltComponents
  kr.uni.auctiondiary.util.UniApp_HiltComponents$ActivityC
@@ -91,13 +114,26 @@ kr/uni/auctiondiary/util/UniApp_HiltComponents.java
  kr.uni.auctiondiary.util.UniApp_HiltComponents$ViewWithFragmentC
  kr.uni.auctiondiary.util.UniApp_HiltComponents$ViewWithFragmentC$Builder
  kr.uni.auctiondiary.util.UniApp_HiltComponents$ViewWithFragmentCBuilderModule
-hilt_aggregated_deps/_kr_uni_auctiondiary_ui_fragment_diary_AuctionDiaryViewModel_HiltModules_KeyModule.java
- hilt_aggregated_deps._kr_uni_auctiondiary_ui_fragment_diary_AuctionDiaryViewModel_HiltModules_KeyModule
-hilt_aggregated_deps/_androidx_hilt_lifecycle_ViewModelFactoryModules_FragmentModuleModuleDeps.java
- hilt_aggregated_deps._androidx_hilt_lifecycle_ViewModelFactoryModules_FragmentModuleModuleDeps
-kr/uni/auctiondiary/ui/fragment/diary/AuctionDiaryViewModel_HiltModules_KeyModule_ProvideFactory.java
- kr.uni.auctiondiary.ui.fragment.diary.AuctionDiaryViewModel_HiltModules_KeyModule_ProvideFactory
- kr.uni.auctiondiary.ui.fragment.diary.AuctionDiaryViewModel_HiltModules_KeyModule_ProvideFactory$InstanceHolder
+kr/uni/auctiondiary/ui/main/Hilt_MainActivity.java
+ kr.uni.auctiondiary.ui.main.Hilt_MainActivity
+ kr.uni.auctiondiary.ui.main.Hilt_MainActivity$1
+kr/uni/auctiondiary/ui/fragment/diary/FragmentAuctionDiary_GeneratedInjector.java
+ kr.uni.auctiondiary.ui.fragment.diary.FragmentAuctionDiary_GeneratedInjector
+kr/uni/auctiondiary/databinding/ActivityMainBinding.java
+ kr.uni.auctiondiary.databinding.ActivityMainBinding
+kr/uni/auctiondiary/databinding/ActivityWriteAuctionBindingImpl.java
+ kr.uni.auctiondiary.databinding.ActivityWriteAuctionBindingImpl
+kr/uni/auctiondiary/ui/activity/Hilt_WriteAuctionActivity.java
+ kr.uni.auctiondiary.ui.activity.Hilt_WriteAuctionActivity
+ kr.uni.auctiondiary.ui.activity.Hilt_WriteAuctionActivity$1
+kr/uni/auctiondiary/ui/activity/WriteAuctionActivity_GeneratedInjector.java
+ kr.uni.auctiondiary.ui.activity.WriteAuctionActivity_GeneratedInjector
+kr/uni/auctiondiary/ui/main/MainActivity_GeneratedInjector.java
+ kr.uni.auctiondiary.ui.main.MainActivity_GeneratedInjector
+kr/uni/auctiondiary/ui/main/MainActivity_MembersInjector.java
+ kr.uni.auctiondiary.ui.main.MainActivity_MembersInjector
+kr/uni/auctiondiary/databinding/FragmentAuctionDiaryBinding.java
+ kr.uni.auctiondiary.databinding.FragmentAuctionDiaryBinding
 kr/uni/auctiondiary/util/DaggerUniApp_HiltComponents_SingletonC.java
  kr.uni.auctiondiary.util.DaggerUniApp_HiltComponents_SingletonC
  kr.uni.auctiondiary.util.DaggerUniApp_HiltComponents_SingletonC$1
@@ -118,51 +154,15 @@ kr/uni/auctiondiary/util/DaggerUniApp_HiltComponents_SingletonC.java
  kr.uni.auctiondiary.util.DaggerUniApp_HiltComponents_SingletonC$ViewModelCImpl$SwitchingProvider
  kr.uni.auctiondiary.util.DaggerUniApp_HiltComponents_SingletonC$ViewWithFragmentCBuilder
  kr.uni.auctiondiary.util.DaggerUniApp_HiltComponents_SingletonC$ViewWithFragmentCImpl
-kr/uni/auctiondiary/BR.java
- kr.uni.auctiondiary.BR
-kr/uni/auctiondiary/ui/activity/WriteAuctionViewModel_HiltModules.java
- kr.uni.auctiondiary.ui.activity.WriteAuctionViewModel_HiltModules
- kr.uni.auctiondiary.ui.activity.WriteAuctionViewModel_HiltModules$BindsModule
- kr.uni.auctiondiary.ui.activity.WriteAuctionViewModel_HiltModules$KeyModule
-kr/uni/auctiondiary/util/database/AppDatabase_Impl.java
- kr.uni.auctiondiary.util.database.AppDatabase_Impl
- kr.uni.auctiondiary.util.database.AppDatabase_Impl$1
-kr/uni/auctiondiary/util/database/dao/AuctionNoteDao_Impl.java
- kr.uni.auctiondiary.util.database.dao.AuctionNoteDao_Impl
- kr.uni.auctiondiary.util.database.dao.AuctionNoteDao_Impl$1
- kr.uni.auctiondiary.util.database.dao.AuctionNoteDao_Impl$2
- kr.uni.auctiondiary.util.database.dao.AuctionNoteDao_Impl$3
- kr.uni.auctiondiary.util.database.dao.AuctionNoteDao_Impl$4
-kr/uni/auctiondiary/ui/fragment/diary/AuctionDiaryViewModel_HiltModules.java
- kr.uni.auctiondiary.ui.fragment.diary.AuctionDiaryViewModel_HiltModules
- kr.uni.auctiondiary.ui.fragment.diary.AuctionDiaryViewModel_HiltModules$BindsModule
- kr.uni.auctiondiary.ui.fragment.diary.AuctionDiaryViewModel_HiltModules$KeyModule
-kr/uni/auctiondiary/generated/callback/OnClickListener.java
- kr.uni.auctiondiary.generated.callback.OnClickListener
- kr.uni.auctiondiary.generated.callback.OnClickListener$Listener
-kr/uni/auctiondiary/databinding/EmptyAuctionNoteBinding.java
- kr.uni.auctiondiary.databinding.EmptyAuctionNoteBinding
-kr/uni/auctiondiary/databinding/ListAuctionNoteBinding.java
- kr.uni.auctiondiary.databinding.ListAuctionNoteBinding
-kr/uni/auctiondiary/databinding/ActivityMainBindingImpl.java
- kr.uni.auctiondiary.databinding.ActivityMainBindingImpl
-kr/uni/auctiondiary/DataBinderMapperImpl.java
- kr.uni.auctiondiary.DataBinderMapperImpl
- kr.uni.auctiondiary.DataBinderMapperImpl$InnerBrLookup
- kr.uni.auctiondiary.DataBinderMapperImpl$InnerLayoutIdLookup
-kr/uni/auctiondiary/databinding/FragmentAuctionDiaryBinding.java
- kr.uni.auctiondiary.databinding.FragmentAuctionDiaryBinding
-kr/uni/auctiondiary/databinding/FragmentAuctionBinding.java
- kr.uni.auctiondiary.databinding.FragmentAuctionBinding
-kr/uni/auctiondiary/databinding/FragmentBoardBinding.java
- kr.uni.auctiondiary.databinding.FragmentBoardBinding
-kr/uni/auctiondiary/databinding/ActivityMainBinding.java
- kr.uni.auctiondiary.databinding.ActivityMainBinding
+kr/uni/auctiondiary/util/UniApp_ComponentTreeDeps.java
+ kr.uni.auctiondiary.util.UniApp_ComponentTreeDeps
 kr/uni/auctiondiary/databinding/FragmentAuctionDiaryBindingImpl.java
  kr.uni.auctiondiary.databinding.FragmentAuctionDiaryBindingImpl
 kr/uni/auctiondiary/databinding/ActivityWriteAuctionBinding.java
  kr.uni.auctiondiary.databinding.ActivityWriteAuctionBinding
-kr/uni/auctiondiary/databinding/ActivityWriteAuctionBindingImpl.java
- kr.uni.auctiondiary.databinding.ActivityWriteAuctionBindingImpl
-kr/uni/auctiondiary/databinding/FragmentSettingBinding.java
- kr.uni.auctiondiary.databinding.FragmentSettingBinding
+kr/uni/auctiondiary/ui/fragment/diary/Hilt_FragmentAuctionDiary.java
+ kr.uni.auctiondiary.ui.fragment.diary.Hilt_FragmentAuctionDiary
+kr/uni/auctiondiary/ui/activity/WriteAuctionViewModel_HiltModules.java
+ kr.uni.auctiondiary.ui.activity.WriteAuctionViewModel_HiltModules
+ kr.uni.auctiondiary.ui.activity.WriteAuctionViewModel_HiltModules$BindsModule
+ kr.uni.auctiondiary.ui.activity.WriteAuctionViewModel_HiltModules$KeyModule

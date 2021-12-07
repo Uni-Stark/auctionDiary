@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import kr.uni.auctiondiary.databinding.ListAuctionNoteBinding
 import kr.uni.auctiondiary.util.database.entity.AuctionNoteEntity
 
-class AuctionDiaryAdapter() :
+class AuctionDiaryAdapter :
     ListAdapter<AuctionNoteEntity, AuctionDiaryAdapter.ViewHolder>(diffUtil) {
 
 

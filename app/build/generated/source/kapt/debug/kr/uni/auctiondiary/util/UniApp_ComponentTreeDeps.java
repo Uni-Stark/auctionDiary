@@ -82,14 +82,14 @@ import hilt_aggregated_deps._kr_uni_auctiondiary_util_UniApp_GeneratedInjector;
         _dagger_hilt_android_internal_managers_ViewComponentManager_ViewWithFragmentComponentBuilderEntryPoint.class,
         _dagger_hilt_android_internal_modules_ApplicationContextModule.class,
         _dagger_hilt_android_internal_modules_HiltWrapper_ActivityModule.class,
-        _kr_uni_auctiondiary_util_UniApp_GeneratedInjector.class,
-        _kr_uni_auctiondiary_ui_activity_WriteAuctionActivity_GeneratedInjector.class,
+        _kr_uni_auctiondiary_ui_fragment_diary_AuctionDiaryViewModel_HiltModules_BindsModule.class,
+        _kr_uni_auctiondiary_ui_fragment_diary_AuctionDiaryViewModel_HiltModules_KeyModule.class,
         _kr_uni_auctiondiary_ui_fragment_diary_FragmentAuctionDiary_GeneratedInjector.class,
         _kr_uni_auctiondiary_ui_main_MainActivity_GeneratedInjector.class,
+        _kr_uni_auctiondiary_util_UniApp_GeneratedInjector.class,
+        _kr_uni_auctiondiary_ui_activity_WriteAuctionActivity_GeneratedInjector.class,
         _kr_uni_auctiondiary_ui_activity_WriteAuctionViewModel_HiltModules_BindsModule.class,
-        _kr_uni_auctiondiary_ui_activity_WriteAuctionViewModel_HiltModules_KeyModule.class,
-        _kr_uni_auctiondiary_ui_fragment_diary_AuctionDiaryViewModel_HiltModules_BindsModule.class,
-        _kr_uni_auctiondiary_ui_fragment_diary_AuctionDiaryViewModel_HiltModules_KeyModule.class
+        _kr_uni_auctiondiary_ui_activity_WriteAuctionViewModel_HiltModules_KeyModule.class
     }
 )
 class UniApp_ComponentTreeDeps {

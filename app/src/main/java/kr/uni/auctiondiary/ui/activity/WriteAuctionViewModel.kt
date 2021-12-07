@@ -8,11 +8,9 @@ import android.location.Geocoder
 import android.location.LocationManager
 import androidx.core.app.ActivityCompat
 import androidx.databinding.ObservableField
-import androidx.hilt.lifecycle.ViewModelInject
 import androidx.lifecycle.ViewModel
 import com.google.android.gms.maps.model.LatLng
 import dagger.hilt.android.lifecycle.HiltViewModel
-import dagger.hilt.android.scopes.ActivityRetainedScoped
 import java.util.*
 import javax.inject.Inject
 

@@ -28,12 +28,12 @@
         "source": "C:\\Users\\kgo07\\Desktop\\auctiondiary\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_round.webp"
     },
     {
-        "merged": "C:\\Users\\kgo07\\Desktop\\auctiondiary\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xhdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\kgo07\\Desktop\\auctiondiary\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_round.webp"
-    },
-    {
         "merged": "C:\\Users\\kgo07\\Desktop\\auctiondiary\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_board.xml.flat",
         "source": "C:\\Users\\kgo07\\Desktop\\auctiondiary\\app\\src\\main\\res\\layout\\fragment_board.xml"
+    },
+    {
+        "merged": "C:\\Users\\kgo07\\Desktop\\auctiondiary\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\kgo07\\Desktop\\auctiondiary\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_round.webp"
     },
     {
         "merged": "C:\\Users\\kgo07\\Desktop\\auctiondiary\\app\\build\\intermediates\\merged_res\\debug\\drawable_style_round.xml.flat",
