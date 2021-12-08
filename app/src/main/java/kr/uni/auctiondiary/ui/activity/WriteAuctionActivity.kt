@@ -62,7 +62,6 @@ class WriteAuctionActivity : BaseActivity() {
                     Toast.LENGTH_SHORT
                 ).show()
             }
-
         }
 
         TedPermission.with(this)

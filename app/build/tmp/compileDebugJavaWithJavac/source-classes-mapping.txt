@@ -85,6 +85,8 @@ kr/uni/auctiondiary/ui/fragment/diary/AuctionDiaryViewModel_HiltModules_KeyModul
  kr.uni.auctiondiary.ui.fragment.diary.AuctionDiaryViewModel_HiltModules_KeyModule_ProvideFactory$InstanceHolder
 kr/uni/auctiondiary/databinding/FragmentAuctionBinding.java
  kr.uni.auctiondiary.databinding.FragmentAuctionBinding
+kr/uni/auctiondiary/util/UniApp_ComponentTreeDeps.java
+ kr.uni.auctiondiary.util.UniApp_ComponentTreeDeps
 kr/uni/auctiondiary/databinding/ActivityMainBindingImpl.java
  kr.uni.auctiondiary.databinding.ActivityMainBindingImpl
 kr/uni/auctiondiary/ui/activity/WriteAuctionViewModel_Factory.java
@@ -154,8 +156,6 @@ kr/uni/auctiondiary/util/DaggerUniApp_HiltComponents_SingletonC.java
  kr.uni.auctiondiary.util.DaggerUniApp_HiltComponents_SingletonC$ViewModelCImpl$SwitchingProvider
  kr.uni.auctiondiary.util.DaggerUniApp_HiltComponents_SingletonC$ViewWithFragmentCBuilder
  kr.uni.auctiondiary.util.DaggerUniApp_HiltComponents_SingletonC$ViewWithFragmentCImpl
-kr/uni/auctiondiary/util/UniApp_ComponentTreeDeps.java
- kr.uni.auctiondiary.util.UniApp_ComponentTreeDeps
 kr/uni/auctiondiary/databinding/FragmentAuctionDiaryBindingImpl.java
  kr.uni.auctiondiary.databinding.FragmentAuctionDiaryBindingImpl
 kr/uni/auctiondiary/databinding/ActivityWriteAuctionBinding.java

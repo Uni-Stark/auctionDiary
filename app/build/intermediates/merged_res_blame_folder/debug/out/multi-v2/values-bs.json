@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\kgo07\\Desktop\\auctiondiary\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-bs\\values-bs.xml",
+            "outputFile": "C:\\Users\\kgo07\\Desktop\\auctionDiary\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-bs\\values-bs.xml",
             "map": [
                 {
                     "source": "C:\\Users\\kgo07\\.gradle\\caches\\transforms-3\\4190c60e3cfcd571e9f7d1479c70573a\\transformed\\appcompat-1.4.0\\res\\values-bs\\values-bs.xml",

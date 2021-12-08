@@ -1,34 +1,34 @@
 [
     {
-        "merged": "C:\\Users\\kgo07\\Desktop\\auctiondiary\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_main.xml",
-        "source": "C:\\Users\\kgo07\\Desktop\\auctiondiary\\app\\src\\main\\res\\layout\\activity_main.xml"
+        "merged": "C:\\Users\\kgo07\\Desktop\\auctionDiary\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_board.xml",
+        "source": "C:\\Users\\kgo07\\Desktop\\auctionDiary\\app\\src\\main\\res\\layout\\fragment_board.xml"
     },
     {
-        "merged": "C:\\Users\\kgo07\\Desktop\\auctiondiary\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_auction_diary.xml",
-        "source": "C:\\Users\\kgo07\\Desktop\\auctiondiary\\app\\src\\main\\res\\layout\\fragment_auction_diary.xml"
+        "merged": "C:\\Users\\kgo07\\Desktop\\auctionDiary\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\list_auction_note.xml",
+        "source": "C:\\Users\\kgo07\\Desktop\\auctionDiary\\app\\src\\main\\res\\layout\\list_auction_note.xml"
     },
     {
-        "merged": "C:\\Users\\kgo07\\Desktop\\auctiondiary\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\empty_auction_note.xml",
-        "source": "C:\\Users\\kgo07\\Desktop\\auctiondiary\\app\\src\\main\\res\\layout\\empty_auction_note.xml"
+        "merged": "C:\\Users\\kgo07\\Desktop\\auctionDiary\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_setting.xml",
+        "source": "C:\\Users\\kgo07\\Desktop\\auctionDiary\\app\\src\\main\\res\\layout\\fragment_setting.xml"
     },
     {
-        "merged": "C:\\Users\\kgo07\\Desktop\\auctiondiary\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\list_auction_note.xml",
-        "source": "C:\\Users\\kgo07\\Desktop\\auctiondiary\\app\\src\\main\\res\\layout\\list_auction_note.xml"
+        "merged": "C:\\Users\\kgo07\\Desktop\\auctionDiary\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_auction.xml",
+        "source": "C:\\Users\\kgo07\\Desktop\\auctionDiary\\app\\src\\main\\res\\layout\\fragment_auction.xml"
     },
     {
-        "merged": "C:\\Users\\kgo07\\Desktop\\auctiondiary\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_auction.xml",
-        "source": "C:\\Users\\kgo07\\Desktop\\auctiondiary\\app\\src\\main\\res\\layout\\fragment_auction.xml"
+        "merged": "C:\\Users\\kgo07\\Desktop\\auctionDiary\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\empty_auction_note.xml",
+        "source": "C:\\Users\\kgo07\\Desktop\\auctionDiary\\app\\src\\main\\res\\layout\\empty_auction_note.xml"
     },
     {
-        "merged": "C:\\Users\\kgo07\\Desktop\\auctiondiary\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_board.xml",
-        "source": "C:\\Users\\kgo07\\Desktop\\auctiondiary\\app\\src\\main\\res\\layout\\fragment_board.xml"
+        "merged": "C:\\Users\\kgo07\\Desktop\\auctionDiary\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_main.xml",
+        "source": "C:\\Users\\kgo07\\Desktop\\auctionDiary\\app\\src\\main\\res\\layout\\activity_main.xml"
     },
     {
-        "merged": "C:\\Users\\kgo07\\Desktop\\auctiondiary\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_write_auction.xml",
-        "source": "C:\\Users\\kgo07\\Desktop\\auctiondiary\\app\\src\\main\\res\\layout\\activity_write_auction.xml"
+        "merged": "C:\\Users\\kgo07\\Desktop\\auctionDiary\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_auction_diary.xml",
+        "source": "C:\\Users\\kgo07\\Desktop\\auctionDiary\\app\\src\\main\\res\\layout\\fragment_auction_diary.xml"
     },
     {
-        "merged": "C:\\Users\\kgo07\\Desktop\\auctiondiary\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_setting.xml",
-        "source": "C:\\Users\\kgo07\\Desktop\\auctiondiary\\app\\src\\main\\res\\layout\\fragment_setting.xml"
+        "merged": "C:\\Users\\kgo07\\Desktop\\auctionDiary\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_write_auction.xml",
+        "source": "C:\\Users\\kgo07\\Desktop\\auctionDiary\\app\\src\\main\\res\\layout\\activity_write_auction.xml"
     }
 ]

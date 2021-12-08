@@ -8,9 +8,12 @@ import android.location.Geocoder
 import android.location.LocationManager
 import androidx.core.app.ActivityCompat
 import androidx.databinding.ObservableField
+import androidx.hilt.lifecycle.ViewModelInject
 import androidx.lifecycle.ViewModel
 import com.google.android.gms.maps.model.LatLng
 import dagger.hilt.android.lifecycle.HiltViewModel
+import dagger.hilt.android.scopes.ActivityRetainedScoped
+import kr.uni.auctiondiary.util.location.MyLocation
 import java.util.*
 import javax.inject.Inject
 
@@ -31,27 +34,7 @@ class WriteAuctionViewModel @Inject constructor() : ViewModel() {
 
     @SuppressLint("MissingPermission")
     fun getLocation(context: Context) {
-        val locationManager = context.getSystemService(Context.LOCATION_SERVICE) as LocationManager
-        val loc =
-            if (locationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER) != null) {
-                locationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER)
-            } else {
-                locationManager.getLastKnownLocation(LocationManager.NETWORK_PROVIDER)
-            }
-        myLocation.set(
-            if (loc != null) {
-                val location = LatLng(loc.latitude, loc.longitude)
-                getAddress(context, location)
-            } else {
-                "주소정보 가져올 수 없음"
-            }
-        )
-
-    }
-
-    private fun getAddress(context: Context, position: LatLng): String {
-        val geoCoder = Geocoder(context, Locale.KOREA)
-        return geoCoder.getFromLocation(position.latitude, position.longitude, 1).first()
-            .getAddressLine(0)
+        val locationLoader = MyLocation(context)
+        myLocation.set(locationLoader.get())
     }
 }
